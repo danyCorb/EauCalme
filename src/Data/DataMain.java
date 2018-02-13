@@ -8,10 +8,12 @@ public class DataMain {
     }
 	
 	private DataKeyborad dataKeyboard;
+	private DataMouse dataMouse;
 	
 	
 	private DataMain(){
 		dataKeyboard=new DataKeyborad();
+		dataMouse=new DataMouse();
 	}
 
 
@@ -22,6 +24,16 @@ public class DataMain {
 
 	public void setDataKeyboard(DataKeyborad dataKeyboard) {
 		this.dataKeyboard = dataKeyboard;
+	}
+
+
+	public DataMouse getDataMouse() {
+		return dataMouse;
+	}
+
+
+	public void setDataMouse(DataMouse dataMouse) {
+		this.dataMouse = dataMouse;
 	}
 	
 	
