@@ -7,11 +7,23 @@ public class DataMain {
 		return INSTANCE;
     }
 	
+	private DataKeyborad dataKeyboard;
 	
 	
 	private DataMain(){
-		
+		dataKeyboard=new DataKeyborad();
 	}
+
+
+	public DataKeyborad getDataKeyboard() {
+		return dataKeyboard;
+	}
+
+
+	public void setDataKeyboard(DataKeyborad dataKeyboard) {
+		this.dataKeyboard = dataKeyboard;
+	}
+	
 	
 	
 	
