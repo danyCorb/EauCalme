@@ -31,7 +31,6 @@ public class MouseEvent implements MouseListener,MouseMotionListener{
 	@Override
 	public void mousePressed(java.awt.event.MouseEvent arg0) {
 		System.out.println("click at:"+ arg0.getX()+" "+arg0.getY());
-		DataMain.getInstance().getMousePosition(arg0.getX(), arg0.getY());
 		
 	}
 

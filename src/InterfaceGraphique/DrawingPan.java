@@ -14,7 +14,6 @@ public class DrawingPan extends JPanel{
 		AffGrid(g);
 		
 		g.setColor(new Color(0,255,255));
-		g.fillRect(dm.mouseX, dm.mouseY, 50, 50);
 		//g.setColor(new Color(0,255,255));
 		//g.fillRect(50, 50, this.getWidth(), 50);
 	}
