@@ -18,7 +18,7 @@ public class Fenetre extends JFrame{
 	
 	private Fenetre(){
 		this.setTitle("Eau Calme THUD");
-	    this.setSize(400, 500);
+	    this.setSize(900, 900);
 	    this.setLocationRelativeTo(null);
 	    this.setResizable(false);
 	    
