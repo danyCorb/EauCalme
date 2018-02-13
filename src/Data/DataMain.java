@@ -9,11 +9,16 @@ public class DataMain {
 		return INSTANCE;
     }
 	
-	int mouseX;
-	int mouseY;
+	public int mouseX;
+	public int mouseY;
 	
 	private DataMain(){
 		
+	}
+	
+	public void getMousePosition(int x,int y){
+		this.mouseX=x;
+		this.mouseY=y;
 	}
 
 }
