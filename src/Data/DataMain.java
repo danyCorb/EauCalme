@@ -10,16 +10,12 @@ public class DataMain {
 	private DataKeyborad dataKeyboard;
 	private DataMouse dataMouse;
 	private DataPlateau dataPlateau;
-	private DataEcran dataEcran;
-	private DataPionSelectionner dataPionSelectionner;
 	
 	
 	private DataMain(){
 		dataKeyboard=new DataKeyborad();
 		dataMouse=new DataMouse();
 		dataPlateau=new DataPlateau();
-		dataEcran=new DataEcran();
-		dataPionSelectionner=new DataPionSelectionner();
 	}
 
 
@@ -39,11 +35,6 @@ public class DataMain {
 	}
 
 
-	public DataEcran getDataEcran() {
-		return dataEcran;
-	}
-
-	
 	
 	
 	
