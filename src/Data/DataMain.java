@@ -9,11 +9,13 @@ public class DataMain {
 	
 	private DataKeyborad dataKeyboard;
 	private DataMouse dataMouse;
+	private DataPlateau dataPlateau;
 	
 	
 	private DataMain(){
 		dataKeyboard=new DataKeyborad();
 		dataMouse=new DataMouse();
+		dataPlateau=new DataPlateau();
 	}
 
 
@@ -22,19 +24,18 @@ public class DataMain {
 	}
 
 
-	public void setDataKeyboard(DataKeyborad dataKeyboard) {
-		this.dataKeyboard = dataKeyboard;
-	}
-
-
 	public DataMouse getDataMouse() {
 		return dataMouse;
 	}
 
 
-	public void setDataMouse(DataMouse dataMouse) {
-		this.dataMouse = dataMouse;
+
+	public DataPlateau getDataPlateau() {
+		return dataPlateau;
 	}
+
+
+	
 	
 	
 	
