@@ -1,8 +1,7 @@
 package InterfaceGraphique;
-import java.awt.event.MouseListener;
-
 import javax.swing.JFrame;
 
+import Data.DataMain;
 import Events.KeyBoardEvent;
 import Events.MouseEvent;
 
@@ -18,7 +17,6 @@ public class Fenetre extends JFrame{
 	
 	private Fenetre(){
 		this.setTitle("Eau Calme THUD");
-	    this.setSize(400, 500);
 	    this.setLocationRelativeTo(null);
 	    this.setResizable(false);
 	    
@@ -33,6 +31,9 @@ public class Fenetre extends JFrame{
 	 * Launch the main loop drawing
 	 */
 	public void LaunchDrawing(){
+		this.setSize(1000, 500);
+		DataMain.getInstance().getDataFenetre().setH(500);
+		DataMain.getInstance().getDataFenetre().setW(500);
 		this.setVisible(true);
 		dt=new DrawingThread();
 		dt.start();

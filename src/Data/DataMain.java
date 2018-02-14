@@ -9,11 +9,17 @@ public class DataMain {
 	
 	private DataKeyborad dataKeyboard;
 	private DataMouse dataMouse;
+	private DataPlateau dataPlateau;
+	private DataPionSelectione dataPionSelectione;
+	private DataFenetre dataFenetre;
 	
 	
 	private DataMain(){
 		dataKeyboard=new DataKeyborad();
 		dataMouse=new DataMouse();
+		dataPlateau=new DataPlateau();
+		dataPionSelectione=new DataPionSelectione();
+		dataFenetre=new DataFenetre();
 	}
 
 
@@ -22,19 +28,28 @@ public class DataMain {
 	}
 
 
-	public void setDataKeyboard(DataKeyborad dataKeyboard) {
-		this.dataKeyboard = dataKeyboard;
-	}
-
-
 	public DataMouse getDataMouse() {
 		return dataMouse;
 	}
 
 
-	public void setDataMouse(DataMouse dataMouse) {
-		this.dataMouse = dataMouse;
+
+	public DataPlateau getDataPlateau() {
+		return dataPlateau;
 	}
+
+
+	public DataPionSelectione getDataPionSelectione() {
+		return dataPionSelectione;
+	}
+
+
+	public DataFenetre getDataFenetre() {
+		return dataFenetre;
+	}
+
+	
+	
 	
 	
 	

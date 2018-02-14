@@ -13,6 +13,7 @@ public class MouseEvent implements MouseListener,MouseMotionListener{
 	 *********************************/
 	@Override
 	public void mouseClicked(java.awt.event.MouseEvent arg0) {
+		
 	}
 
 	@Override
@@ -30,7 +31,7 @@ public class MouseEvent implements MouseListener,MouseMotionListener{
 	@Override
 	public void mousePressed(java.awt.event.MouseEvent arg0) {
 		System.out.println("click at:"+ arg0.getX()+" "+arg0.getY());
-		DataMain.getInstance().getMousePosition( arg0.getX(), arg0.getY());
+		
 	}
 
 	@Override
@@ -50,8 +51,23 @@ public class MouseEvent implements MouseListener,MouseMotionListener{
 
 	@Override
 	public void mouseMoved(java.awt.event.MouseEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 	
+	
+	public int[] selectCase(java.awt.event.MouseEvent arg0, int widthScreen, int heightScreen) {
+		
+		int a;
+		int b;
+		
+		int posX=arg0.getX();
+		int posY=arg0.getY();
+		
+		a = posX*15/widthScreen;
+		b = posY*15/heightScreen;
+		
+		int selectedCase[] = {a, b};
+		
+		return selectedCase	;
+	}
 }
