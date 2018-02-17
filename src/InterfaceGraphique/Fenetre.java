@@ -7,7 +7,7 @@ import Events.MouseEvent;
 
 public class Fenetre extends JFrame{
 	private DrawingThread dt;
-	private DrawingPan dp;
+	
 	
 	private static Fenetre INSTANCE =new Fenetre();
 	public static Fenetre getInstance()
@@ -20,10 +20,10 @@ public class Fenetre extends JFrame{
 	    this.setLocationRelativeTo(null);
 	    this.setResizable(false);
 	    
-	    /*
-	     * Set the writing panel
-	     */
-	    this.setContentPane((dp=new DrawingPan()));
+	    this.setSize(600, 600);
+		DataMain.getInstance().getDataFenetre().setH(600);
+		DataMain.getInstance().getDataFenetre().setW(600);
+
 	}
 	
 	
@@ -31,10 +31,6 @@ public class Fenetre extends JFrame{
 	 * Launch the main loop drawing
 	 */
 	public void LaunchDrawing(){
-		this.setSize(1000, 500);
-		DataMain.getInstance().getDataFenetre().setH(500);
-		DataMain.getInstance().getDataFenetre().setW(500);
-		this.setVisible(true);
 		dt=new DrawingThread();
 		dt.start();
 	}
@@ -42,7 +38,7 @@ public class Fenetre extends JFrame{
 	private class DrawingThread extends Thread {
 		public void run(){
 			while(true){
-				dp.repaint();
+				getContentPane().repaint();
 				try {
 					Thread.sleep(1000/30);
 				} catch (InterruptedException e) {
@@ -57,18 +53,20 @@ public class Fenetre extends JFrame{
 	 * @return 
 	 */
 	public void closeWindow(){
-		dt.stop();
+		if(dt!=null)
+			dt.stop();
 		this.dispose();
 		System.exit(0);
 	}
 	
 	
 	public void addMouseListener(MouseEvent ml){
-		dp.addMouseListener(ml);
-		dp.addMouseMotionListener(ml);
+		this.getContentPane().addMouseListener(ml);
+		this.getContentPane().addMouseMotionListener(ml);
 	}
 	public void addKeyListener(KeyBoardEvent ml){
 		super.addKeyListener(ml);
 	}
+	
 	
 }
