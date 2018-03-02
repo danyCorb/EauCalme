@@ -12,8 +12,9 @@ public class DrawingPan extends JPanel{
 	public void paintComponent(Graphics g){
 		DataMain dm=DataMain.getInstance();
 		AffGrid(g);
-		
+		posPion(g, DataMain.getInstance().getDataPionSelectione().getX(), DataMain.getInstance().getDataPionSelectione().getX(), new Color(255, 0 ,0, 75));
 		g.setColor(new Color(0,255,255));
+		pionMove(g , new int []{1,3,7},  new int []{1,3,7});
 		//g.setColor(new Color(0,255,255));
 		//g.fillRect(50, 50, this.getWidth(), 50);
 	}
@@ -88,5 +89,19 @@ public class DrawingPan extends JPanel{
 		double nainh = Hscreen/15;
 		g.fillOval(x, y, (int)nainw, (int)nainh);
 	}
+	public void posPion (Graphics g, int x ,int y, Color c){
+		g.setColor(c);
+		double Wscreen = this.getWidth();
+		double Hscreen = this.getHeight();
+		double casew = Wscreen/15;
+		double caseh = Hscreen/15;
+		g.fillRect((int) (x*casew), (int) (y*caseh), (int)casew, (int)caseh);
+	}
+	public void pionMove (Graphics g, int x[], int y []){
+		for (int i = 0; i<x.length; i++){
+			posPion(g, x[i], x[i], new Color(255, 255 ,0, 75));
+		}
+	}
+	
 	
 }
