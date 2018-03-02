@@ -1,20 +1,20 @@
 package Data;
 
 public class DataMain {
-	
-	
-	private static DataMain INSTANCE =new DataMain();
+
+
+	private static final DataMain INSTANCE =new DataMain();
 	public static DataMain getInstance(){
 		return INSTANCE;
     }
-	
+
 	private DataKeyborad dataKeyboard;
 	private DataMouse dataMouse;
 	private DataPlateau dataPlateau;
 	private DataPionSelectione dataPionSelectione;
 	private DataFenetre dataFenetre;
 	private DataPlayer dataPlayer;
-	
+
 	private DataMain(){
 		dataKeyboard=new DataKeyborad();
 		dataMouse=new DataMouse();
@@ -55,11 +55,11 @@ public class DataMain {
 		return dataPlayer;
 	}
 
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 }

@@ -1,4 +1,9 @@
 package MainPackage;
+import java.sql.Date;
+
+
+import DAO.JoueurDAO;
+import DAO.MainDAO;
 import Data.DataMain;
 import Events.KeyBoardEvent;
 import Events.MouseEvent;
@@ -13,6 +18,7 @@ public class EauCalmeMain {
 	
 	private static Fenetre f=Fenetre.getInstance();
 	private static DataMain dm=DataMain.getInstance();
+	private static MainDAO mdao=MainDAO.getInstance();
 	
 	private static WindowEvent we=new WindowEvent(f);
 	private static MouseEvent me=new MouseEvent();
@@ -28,8 +34,8 @@ public class EauCalmeMain {
 
 	public static void main(String[] args) {
 		
-		
 		f.setContentPane(snp);
+		
 		
 		f.addWindowListener(we);
 		f.addMouseListener(me);

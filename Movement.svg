@@ -1,0 +1,982 @@
+<svg id="Groupe_34" data-name="Groupe 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1099 174 758 848">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dfd0b0;
+      }
+
+      .cls-2 {
+        fill: rgba(223,208,176,0);
+      }
+
+      .cls-3 {
+        fill: rgba(255,255,255,0);
+      }
+
+      .cls-4 {
+        fill: #fff;
+        stroke: #95989a;
+      }
+
+      .cls-5 {
+        fill: #feeed0;
+      }
+
+      .cls-6 {
+        fill: #8d8d8d;
+      }
+
+      .cls-7 {
+        fill: #ffa5a5;
+      }
+
+      .cls-8 {
+        fill: #82ccec;
+      }
+
+      .cls-9 {
+        fill: rgba(255,214,81,0.7);
+      }
+
+      .cls-10 {
+        fill: #fedd76;
+      }
+
+      .cls-11 {
+        fill: #95989a;
+        font-size: 20px;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-12 {
+        stroke: none;
+      }
+
+      .cls-13 {
+        fill: none;
+      }
+
+      .cls-14 {
+        filter: url(#Ellipse_55);
+      }
+
+      .cls-15 {
+        filter: url(#Ellipse_54);
+      }
+
+      .cls-16 {
+        filter: url(#Ellipse_53);
+      }
+
+      .cls-17 {
+        filter: url(#Ellipse_52);
+      }
+
+      .cls-18 {
+        filter: url(#Ellipse_51);
+      }
+
+      .cls-19 {
+        filter: url(#Ellipse_50);
+      }
+
+      .cls-20 {
+        filter: url(#Ellipse_49);
+      }
+
+      .cls-21 {
+        filter: url(#Ellipse_48);
+      }
+
+      .cls-22 {
+        filter: url(#Ellipse_47);
+      }
+
+      .cls-23 {
+        filter: url(#Ellipse_46);
+      }
+
+      .cls-24 {
+        filter: url(#Ellipse_45);
+      }
+
+      .cls-25 {
+        filter: url(#Ellipse_44);
+      }
+
+      .cls-26 {
+        filter: url(#Ellipse_43);
+      }
+
+      .cls-27 {
+        filter: url(#Ellipse_42);
+      }
+
+      .cls-28 {
+        filter: url(#Ellipse_41);
+      }
+
+      .cls-29 {
+        filter: url(#Ellipse_40);
+      }
+
+      .cls-30 {
+        filter: url(#Ellipse_39);
+      }
+
+      .cls-31 {
+        filter: url(#Ellipse_38);
+      }
+
+      .cls-32 {
+        filter: url(#Ellipse_37);
+      }
+
+      .cls-33 {
+        filter: url(#Ellipse_36);
+      }
+
+      .cls-34 {
+        filter: url(#Ellipse_35);
+      }
+
+      .cls-35 {
+        filter: url(#Ellipse_34);
+      }
+
+      .cls-36 {
+        filter: url(#Ellipse_33);
+      }
+
+      .cls-37 {
+        filter: url(#Ellipse_32);
+      }
+
+      .cls-38 {
+        filter: url(#Ellipse_31);
+      }
+
+      .cls-39 {
+        filter: url(#Ellipse_29);
+      }
+
+      .cls-40 {
+        filter: url(#Ellipse_28);
+      }
+
+      .cls-41 {
+        filter: url(#Ellipse_27);
+      }
+
+      .cls-42 {
+        filter: url(#Ellipse_26);
+      }
+
+      .cls-43 {
+        filter: url(#Ellipse_23);
+      }
+
+      .cls-44 {
+        filter: url(#Ellipse_22);
+      }
+
+      .cls-45 {
+        filter: url(#Ellipse_21);
+      }
+
+      .cls-46 {
+        filter: url(#Ellipse_19);
+      }
+
+      .cls-47 {
+        filter: url(#Ellipse_18);
+      }
+
+      .cls-48 {
+        filter: url(#Ellipse_17);
+      }
+
+      .cls-49 {
+        filter: url(#Ellipse_16);
+      }
+
+      .cls-50 {
+        filter: url(#Ellipse_14);
+      }
+
+      .cls-51 {
+        filter: url(#Ellipse_13);
+      }
+
+      .cls-52 {
+        filter: url(#Ellipse_12);
+      }
+
+      .cls-53 {
+        filter: url(#Ellipse_11);
+      }
+
+      .cls-54 {
+        filter: url(#Ellipse_10);
+      }
+
+      .cls-55 {
+        filter: url(#Ellipse_8);
+      }
+
+      .cls-56 {
+        filter: url(#Ellipse_7);
+      }
+
+      .cls-57 {
+        filter: url(#Ellipse_6);
+      }
+
+      .cls-58 {
+        filter: url(#Ellipse_5);
+      }
+
+      .cls-59 {
+        filter: url(#Ellipse_3);
+      }
+    </style>
+    <filter id="Ellipse_3" x="1449" y="614" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_5" x="1499" y="614" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_6" x="1499" y="564" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_7" x="1449" y="564" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_8" x="1399" y="564" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_10" x="1399" y="664" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_11" x="1449" y="664" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_12" x="1499" y="664" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_13" x="1349" y="264" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-9"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_14" x="1399" y="264" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-10"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_16" x="1499" y="264" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-11"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-11"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_17" x="1549" y="264" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-12"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-12"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_18" x="1349" y="964" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-13"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-13"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_19" x="1399" y="964" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-14"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-14"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_21" x="1499" y="964" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-15"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-15"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_22" x="1549" y="964" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-16"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-16"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_23" x="1799" y="514" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-17"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-17"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_26" x="1799" y="664" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-18"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-18"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_27" x="1799" y="714" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-19"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-19"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_28" x="1099" y="514" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-20"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-20"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_29" x="1099" y="564" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-21"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-21"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_31" x="1099" y="664" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-22"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-22"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_32" x="1099" y="714" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-23"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-23"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_33" x="1749" y="464" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-24"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-24"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_34" x="1699" y="414" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-25"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-25"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_35" x="1649" y="364" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-26"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-26"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_36" x="1599" y="314" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-27"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-27"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_37" x="1799" y="514" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-28"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-28"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_38" x="1749" y="464" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-29"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-29"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_39" x="1699" y="414" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-30"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-30"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_40" x="1649" y="364" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-31"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-31"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_41" x="1599" y="314" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-32"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-32"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_42" x="1299" y="914" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-33"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-33"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_43" x="1249" y="864" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-34"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-34"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_44" x="1199" y="814" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-35"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-35"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_45" x="1149" y="764" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-36"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-36"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_46" x="1149" y="464" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-37"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-37"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_47" x="1199" y="414" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-38"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-38"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_48" x="1249" y="364" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-39"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-39"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_49" x="1299" y="314" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-40"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-40"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_50" x="1599" y="914" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-41"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-41"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_51" x="1649" y="864" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-42"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-42"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_52" x="1699" y="814" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-43"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-43"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_53" x="1749" y="764" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-44"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-44"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_54" x="1649" y="564" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-45"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-45"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_55" x="1299" y="614" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-46"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-46"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_20" data-name="Groupe 20" transform="translate(838 -1)">
+    <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-1" width="355" height="62" transform="translate(265.194 517.217) rotate(-45)"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" class="cls-1" width="355" height="62" transform="translate(721.194 972.217) rotate(-45)"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-1" width="355" height="62" transform="translate(309.034 721.194) rotate(45)"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-1" width="355" height="62" transform="translate(765.034 266.194) rotate(45)"/>
+    <g id="Groupe_18" data-name="Groupe 18" transform="translate(-924 -1)">
+      <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1189 267)"/>
+      <rect id="Rectangle_5-2" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1289 267)"/>
+      <rect id="Rectangle_5-3" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1389 267)"/>
+      <rect id="Rectangle_5-4" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1489 267)"/>
+      <rect id="Rectangle_5-5" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1589 267)"/>
+      <rect id="Rectangle_5-6" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1689 267)"/>
+      <rect id="Rectangle_5-7" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1789 267)"/>
+      <rect id="Rectangle_5-8" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1889 267)"/>
+      <rect id="Rectangle_5-9" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1189 367)"/>
+      <rect id="Rectangle_5-10" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1289 367)"/>
+      <rect id="Rectangle_5-11" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1389 367)"/>
+      <rect id="Rectangle_5-12" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1489 367)"/>
+      <rect id="Rectangle_5-13" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1589 367)"/>
+      <rect id="Rectangle_5-14" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1689 367)"/>
+      <rect id="Rectangle_5-15" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1789 367)"/>
+      <rect id="Rectangle_5-16" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1889 367)"/>
+      <rect id="Rectangle_5-17" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1189 467)"/>
+      <rect id="Rectangle_5-18" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1289 467)"/>
+      <rect id="Rectangle_5-19" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1389 467)"/>
+      <rect id="Rectangle_5-20" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1489 467)"/>
+      <rect id="Rectangle_5-21" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1589 467)"/>
+      <rect id="Rectangle_5-22" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1689 467)"/>
+      <rect id="Rectangle_5-23" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1789 467)"/>
+      <rect id="Rectangle_5-24" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1889 467)"/>
+      <rect id="Rectangle_5-25" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1189 567)"/>
+      <rect id="Rectangle_5-26" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1289 567)"/>
+      <rect id="Rectangle_5-27" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1389 567)"/>
+      <rect id="Rectangle_5-28" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1489 567)"/>
+      <rect id="Rectangle_5-29" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1589 567)"/>
+      <rect id="Rectangle_5-30" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1689 567)"/>
+      <rect id="Rectangle_5-31" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1789 567)"/>
+      <rect id="Rectangle_5-32" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1889 567)"/>
+      <rect id="Rectangle_5-33" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1189 667)"/>
+      <rect id="Rectangle_5-34" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1289 667)"/>
+      <rect id="Rectangle_5-35" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1389 667)"/>
+      <rect id="Rectangle_5-36" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1489 667)"/>
+      <rect id="Rectangle_5-37" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1589 667)"/>
+      <rect id="Rectangle_5-38" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1689 667)"/>
+      <rect id="Rectangle_5-39" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1789 667)"/>
+      <rect id="Rectangle_5-40" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1889 667)"/>
+      <rect id="Rectangle_5-41" data-name="Rectangle 5" class="cls-3" width="50" height="50" transform="translate(1189 767)"/>
+      <rect id="Rectangle_5-42" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1289 767)"/>
+      <rect id="Rectangle_5-43" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1389 767)"/>
+      <rect id="Rectangle_5-44" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1489 767)"/>
+      <rect id="Rectangle_5-45" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1589 767)"/>
+      <rect id="Rectangle_5-46" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1689 767)"/>
+      <rect id="Rectangle_5-47" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1789 767)"/>
+      <rect id="Rectangle_5-48" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1889 767)"/>
+      <rect id="Rectangle_5-49" data-name="Rectangle 5" class="cls-3" width="50" height="50" transform="translate(1189 867)"/>
+      <rect id="Rectangle_5-50" data-name="Rectangle 5" class="cls-3" width="50" height="50" transform="translate(1289 867)"/>
+      <rect id="Rectangle_5-51" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1389 867)"/>
+      <rect id="Rectangle_5-52" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1489 867)"/>
+      <rect id="Rectangle_5-53" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1589 867)"/>
+      <rect id="Rectangle_5-54" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1689 867)"/>
+      <rect id="Rectangle_5-55" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1789 867)"/>
+      <rect id="Rectangle_5-56" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1889 867)"/>
+      <rect id="Rectangle_5-57" data-name="Rectangle 5" class="cls-3" width="50" height="50" transform="translate(1189 967)"/>
+      <rect id="Rectangle_5-58" data-name="Rectangle 5" class="cls-3" width="50" height="50" transform="translate(1289 967)"/>
+      <rect id="Rectangle_5-59" data-name="Rectangle 5" class="cls-3" width="50" height="50" transform="translate(1389 967)"/>
+      <rect id="Rectangle_5-60" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1489 967)"/>
+      <rect id="Rectangle_5-61" data-name="Rectangle 5" class="cls-1" width="50" height="50" transform="translate(1589 967)"/>
+      <rect id="Rectangle_5-62" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1689 967)"/>
+      <rect id="Rectangle_5-63" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1789 967)"/>
+      <rect id="Rectangle_5-64" data-name="Rectangle 5" class="cls-2" width="50" height="50" transform="translate(1889 967)"/>
+      <g id="Rectangle_6" data-name="Rectangle 6" class="cls-4" transform="translate(1544 499)">
+        <rect class="cls-12" width="1" height="3"/>
+        <rect class="cls-13" x="0.5" y="0.5" height="2"/>
+      </g>
+      <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1239 317)"/>
+      <rect id="Rectangle_7-2" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1339 317)"/>
+      <rect id="Rectangle_7-3" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1439 317)"/>
+      <rect id="Rectangle_7-4" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1539 317)"/>
+      <rect id="Rectangle_7-5" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1639 317)"/>
+      <rect id="Rectangle_7-6" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1739 317)"/>
+      <rect id="Rectangle_7-7" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1839 317)"/>
+      <rect id="Rectangle_7-8" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1239 417)"/>
+      <rect id="Rectangle_7-9" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1339 417)"/>
+      <rect id="Rectangle_7-10" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1439 417)"/>
+      <rect id="Rectangle_7-11" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1539 417)"/>
+      <rect id="Rectangle_7-12" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1639 417)"/>
+      <rect id="Rectangle_7-13" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1739 417)"/>
+      <rect id="Rectangle_7-14" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1839 417)"/>
+      <rect id="Rectangle_7-15" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1239 517)"/>
+      <rect id="Rectangle_7-16" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1339 517)"/>
+      <rect id="Rectangle_7-17" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1439 517)"/>
+      <rect id="Rectangle_7-18" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1539 517)"/>
+      <rect id="Rectangle_7-19" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1639 517)"/>
+      <rect id="Rectangle_7-20" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1739 517)"/>
+      <rect id="Rectangle_7-21" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1839 517)"/>
+      <rect id="Rectangle_7-22" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1239 617)"/>
+      <rect id="Rectangle_7-23" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1339 617)"/>
+      <rect id="Rectangle_7-24" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1439 617)"/>
+      <rect id="Rectangle_7-25" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1539 617)"/>
+      <rect id="Rectangle_7-26" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1639 617)"/>
+      <rect id="Rectangle_7-27" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1739 617)"/>
+      <rect id="Rectangle_7-28" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1839 617)"/>
+      <rect id="Rectangle_7-29" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1239 717)"/>
+      <rect id="Rectangle_7-30" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1339 717)"/>
+      <rect id="Rectangle_7-31" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1439 717)"/>
+      <rect id="Rectangle_7-32" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1539 717)"/>
+      <rect id="Rectangle_7-33" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1639 717)"/>
+      <rect id="Rectangle_7-34" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1739 717)"/>
+      <rect id="Rectangle_7-35" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1839 717)"/>
+      <rect id="Rectangle_7-36" data-name="Rectangle 7" class="cls-3" width="50" height="50" transform="translate(1239 817)"/>
+      <rect id="Rectangle_7-37" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1339 817)"/>
+      <rect id="Rectangle_7-38" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1439 817)"/>
+      <rect id="Rectangle_7-39" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1539 817)"/>
+      <rect id="Rectangle_7-40" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1639 817)"/>
+      <rect id="Rectangle_7-41" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1739 817)"/>
+      <rect id="Rectangle_7-42" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1839 817)"/>
+      <rect id="Rectangle_7-43" data-name="Rectangle 7" class="cls-3" width="50" height="50" transform="translate(1239 917)"/>
+      <rect id="Rectangle_7-44" data-name="Rectangle 7" class="cls-3" width="50" height="50" transform="translate(1339 917)"/>
+      <rect id="Rectangle_7-45" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1439 917)"/>
+      <rect id="Rectangle_7-46" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1539 917)"/>
+      <rect id="Rectangle_7-47" data-name="Rectangle 7" class="cls-1" width="50" height="50" transform="translate(1639 917)"/>
+      <rect id="Rectangle_7-48" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1739 917)"/>
+      <rect id="Rectangle_7-49" data-name="Rectangle 7" class="cls-2" width="50" height="50" transform="translate(1839 917)"/>
+      <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1239 267)"/>
+      <rect id="Rectangle_8-2" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1339 267)"/>
+      <rect id="Rectangle_8-3" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1439 267)"/>
+      <rect id="Rectangle_8-4" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1539 267)"/>
+      <rect id="Rectangle_8-5" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1639 267)"/>
+      <rect id="Rectangle_8-6" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1739 267)"/>
+      <rect id="Rectangle_8-7" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1839 267)"/>
+      <rect id="Rectangle_8-8" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1239 367)"/>
+      <rect id="Rectangle_8-9" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1339 367)"/>
+      <rect id="Rectangle_8-10" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1439 367)"/>
+      <rect id="Rectangle_8-11" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1539 367)"/>
+      <rect id="Rectangle_8-12" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1639 367)"/>
+      <rect id="Rectangle_8-13" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1739 367)"/>
+      <rect id="Rectangle_8-14" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1839 367)"/>
+      <rect id="Rectangle_8-15" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1239 467)"/>
+      <rect id="Rectangle_8-16" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1339 467)"/>
+      <rect id="Rectangle_8-17" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1439 467)"/>
+      <rect id="Rectangle_8-18" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1539 467)"/>
+      <rect id="Rectangle_8-19" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1639 467)"/>
+      <rect id="Rectangle_8-20" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1739 467)"/>
+      <rect id="Rectangle_8-21" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1839 467)"/>
+      <rect id="Rectangle_8-22" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1239 567)"/>
+      <rect id="Rectangle_8-23" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1339 567)"/>
+      <rect id="Rectangle_8-24" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1439 567)"/>
+      <rect id="Rectangle_8-25" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1539 567)"/>
+      <rect id="Rectangle_8-26" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1639 567)"/>
+      <rect id="Rectangle_8-27" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1739 567)"/>
+      <rect id="Rectangle_8-28" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1839 567)"/>
+      <rect id="Rectangle_8-29" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1239 667)"/>
+      <rect id="Rectangle_8-30" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1339 667)"/>
+      <rect id="Rectangle_8-31" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1439 667)"/>
+      <rect id="Rectangle_8-32" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1539 667)"/>
+      <rect id="Rectangle_8-33" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1639 667)"/>
+      <rect id="Rectangle_8-34" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1739 667)"/>
+      <rect id="Rectangle_8-35" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1839 667)"/>
+      <rect id="Rectangle_8-36" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1239 767)"/>
+      <rect id="Rectangle_8-37" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1339 767)"/>
+      <rect id="Rectangle_8-38" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1439 767)"/>
+      <rect id="Rectangle_8-39" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1539 767)"/>
+      <rect id="Rectangle_8-40" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1639 767)"/>
+      <rect id="Rectangle_8-41" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1739 767)"/>
+      <rect id="Rectangle_8-42" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1839 767)"/>
+      <rect id="Rectangle_8-43" data-name="Rectangle 8" class="cls-3" width="50" height="50" transform="translate(1239 867)"/>
+      <rect id="Rectangle_8-44" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1339 867)"/>
+      <rect id="Rectangle_8-45" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1439 867)"/>
+      <rect id="Rectangle_8-46" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1539 867)"/>
+      <rect id="Rectangle_8-47" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1639 867)"/>
+      <rect id="Rectangle_8-48" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1739 867)"/>
+      <rect id="Rectangle_8-49" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1839 867)"/>
+      <rect id="Rectangle_8-50" data-name="Rectangle 8" class="cls-3" width="50" height="50" transform="translate(1239 967)"/>
+      <rect id="Rectangle_8-51" data-name="Rectangle 8" class="cls-3" width="50" height="50" transform="translate(1339 967)"/>
+      <rect id="Rectangle_8-52" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1439 967)"/>
+      <rect id="Rectangle_8-53" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1539 967)"/>
+      <rect id="Rectangle_8-54" data-name="Rectangle 8" class="cls-5" width="50" height="50" transform="translate(1639 967)"/>
+      <rect id="Rectangle_8-55" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1739 967)"/>
+      <rect id="Rectangle_8-56" data-name="Rectangle 8" class="cls-2" width="50" height="50" transform="translate(1839 967)"/>
+      <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1189 317)"/>
+      <rect id="Rectangle_9-2" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1289 317)"/>
+      <rect id="Rectangle_9-3" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1389 317)"/>
+      <rect id="Rectangle_9-4" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1489 317)"/>
+      <rect id="Rectangle_9-5" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1589 317)"/>
+      <rect id="Rectangle_9-6" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1689 317)"/>
+      <rect id="Rectangle_9-7" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1789 317)"/>
+      <rect id="Rectangle_9-8" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1889 317)"/>
+      <rect id="Rectangle_9-9" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1189 417)"/>
+      <rect id="Rectangle_9-10" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1289 417)"/>
+      <rect id="Rectangle_9-11" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1389 417)"/>
+      <rect id="Rectangle_9-12" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1489 417)"/>
+      <rect id="Rectangle_9-13" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1589 417)"/>
+      <rect id="Rectangle_9-14" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1689 417)"/>
+      <rect id="Rectangle_9-15" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1789 417)"/>
+      <rect id="Rectangle_9-16" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1889 417)"/>
+      <rect id="Rectangle_9-17" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1189 517)"/>
+      <rect id="Rectangle_9-18" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1289 517)"/>
+      <rect id="Rectangle_9-19" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1389 517)"/>
+      <rect id="Rectangle_9-20" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1489 517)"/>
+      <rect id="Rectangle_9-21" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1589 517)"/>
+      <rect id="Rectangle_9-22" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1689 517)"/>
+      <rect id="Rectangle_9-23" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1789 517)"/>
+      <rect id="Rectangle_9-24" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1889 517)"/>
+      <rect id="Rectangle_9-25" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1189 617)"/>
+      <rect id="Rectangle_9-26" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1289 617)"/>
+      <rect id="Rectangle_9-27" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1389 617)"/>
+      <rect id="Rectangle_9-28" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1489 617)"/>
+      <rect id="Rectangle_9-29" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1589 617)"/>
+      <rect id="Rectangle_9-30" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1689 617)"/>
+      <rect id="Rectangle_9-31" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1789 617)"/>
+      <rect id="Rectangle_9-32" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1889 617)"/>
+      <rect id="Rectangle_9-33" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1189 717)"/>
+      <rect id="Rectangle_9-34" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1289 717)"/>
+      <rect id="Rectangle_9-35" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1389 717)"/>
+      <rect id="Rectangle_9-36" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1489 717)"/>
+      <rect id="Rectangle_9-37" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1589 717)"/>
+      <rect id="Rectangle_9-38" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1689 717)"/>
+      <rect id="Rectangle_9-39" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1789 717)"/>
+      <rect id="Rectangle_9-40" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1889 717)"/>
+      <rect id="Rectangle_9-41" data-name="Rectangle 9" class="cls-3" width="50" height="50" transform="translate(1189 817)"/>
+      <rect id="Rectangle_9-42" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1289 817)"/>
+      <rect id="Rectangle_9-43" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1389 817)"/>
+      <rect id="Rectangle_9-44" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1489 817)"/>
+      <rect id="Rectangle_9-45" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1589 817)"/>
+      <rect id="Rectangle_9-46" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1689 817)"/>
+      <rect id="Rectangle_9-47" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1789 817)"/>
+      <rect id="Rectangle_9-48" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1889 817)"/>
+      <rect id="Rectangle_9-49" data-name="Rectangle 9" class="cls-3" width="50" height="50" transform="translate(1189 917)"/>
+      <rect id="Rectangle_9-50" data-name="Rectangle 9" class="cls-3" width="50" height="50" transform="translate(1289 917)"/>
+      <rect id="Rectangle_9-51" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1389 917)"/>
+      <rect id="Rectangle_9-52" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1489 917)"/>
+      <rect id="Rectangle_9-53" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1589 917)"/>
+      <rect id="Rectangle_9-54" data-name="Rectangle 9" class="cls-5" width="50" height="50" transform="translate(1689 917)"/>
+      <rect id="Rectangle_9-55" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1789 917)"/>
+      <rect id="Rectangle_9-56" data-name="Rectangle 9" class="cls-2" width="50" height="50" transform="translate(1889 917)"/>
+      <g class="cls-59" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_3-2" data-name="Ellipse 3" class="cls-6" cx="20" cy="20" r="20" transform="translate(1458 620)"/>
+      </g>
+      <g class="cls-58" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_5-2" data-name="Ellipse 5" class="cls-7" cx="20" cy="20" r="20" transform="translate(1508 620)"/>
+      </g>
+      <g class="cls-57" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_6-2" data-name="Ellipse 6" class="cls-7" cx="20" cy="20" r="20" transform="translate(1508 570)"/>
+      </g>
+      <g class="cls-56" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_7-2" data-name="Ellipse 7" class="cls-7" cx="20" cy="20" r="20" transform="translate(1458 570)"/>
+      </g>
+      <g class="cls-55" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_8-2" data-name="Ellipse 8" class="cls-7" cx="20" cy="20" r="20" transform="translate(1408 570)"/>
+      </g>
+      <g class="cls-54" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_10-2" data-name="Ellipse 10" class="cls-7" cx="20" cy="20" r="20" transform="translate(1408 670)"/>
+      </g>
+      <g class="cls-53" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_11-2" data-name="Ellipse 11" class="cls-7" cx="20" cy="20" r="20" transform="translate(1458 670)"/>
+      </g>
+      <g class="cls-52" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_12-2" data-name="Ellipse 12" class="cls-7" cx="20" cy="20" r="20" transform="translate(1508 670)"/>
+      </g>
+      <g class="cls-51" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_13-2" data-name="Ellipse 13" class="cls-8" cx="20" cy="20" r="20" transform="translate(1358 270)"/>
+      </g>
+      <g class="cls-50" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_14-2" data-name="Ellipse 14" class="cls-8" cx="20" cy="20" r="20" transform="translate(1408 270)"/>
+      </g>
+      <g class="cls-49" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_16-2" data-name="Ellipse 16" class="cls-8" cx="20" cy="20" r="20" transform="translate(1508 270)"/>
+      </g>
+      <g class="cls-48" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_17-2" data-name="Ellipse 17" class="cls-8" cx="20" cy="20" r="20" transform="translate(1558 270)"/>
+      </g>
+      <g class="cls-47" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_18-2" data-name="Ellipse 18" class="cls-8" cx="20" cy="20" r="20" transform="translate(1358 970)"/>
+      </g>
+      <g class="cls-46" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_19-2" data-name="Ellipse 19" class="cls-8" cx="20" cy="20" r="20" transform="translate(1408 970)"/>
+      </g>
+      <g class="cls-45" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_21-2" data-name="Ellipse 21" class="cls-8" cx="20" cy="20" r="20" transform="translate(1508 970)"/>
+      </g>
+      <g class="cls-44" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_22-2" data-name="Ellipse 22" class="cls-8" cx="20" cy="20" r="20" transform="translate(1558 970)"/>
+      </g>
+      <g class="cls-43" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_23-2" data-name="Ellipse 23" class="cls-8" cx="20" cy="20" r="20" transform="translate(1808 520)"/>
+      </g>
+      <g class="cls-42" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_26-2" data-name="Ellipse 26" class="cls-8" cx="20" cy="20" r="20" transform="translate(1808 670)"/>
+      </g>
+      <g class="cls-41" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_27-2" data-name="Ellipse 27" class="cls-8" cx="20" cy="20" r="20" transform="translate(1808 720)"/>
+      </g>
+      <g class="cls-40" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_28-2" data-name="Ellipse 28" class="cls-8" cx="20" cy="20" r="20" transform="translate(1108 520)"/>
+      </g>
+      <g class="cls-39" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_29-2" data-name="Ellipse 29" class="cls-8" cx="20" cy="20" r="20" transform="translate(1108 570)"/>
+      </g>
+      <g class="cls-38" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_31-2" data-name="Ellipse 31" class="cls-8" cx="20" cy="20" r="20" transform="translate(1108 670)"/>
+      </g>
+      <g class="cls-37" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_32-2" data-name="Ellipse 32" class="cls-8" cx="20" cy="20" r="20" transform="translate(1108 720)"/>
+      </g>
+      <g class="cls-36" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_33-2" data-name="Ellipse 33" class="cls-8" cx="20" cy="20" r="20" transform="translate(1758 470)"/>
+      </g>
+      <g class="cls-35" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_34-2" data-name="Ellipse 34" class="cls-8" cx="20" cy="20" r="20" transform="translate(1708 420)"/>
+      </g>
+      <g class="cls-34" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_35-2" data-name="Ellipse 35" class="cls-8" cx="20" cy="20" r="20" transform="translate(1658 370)"/>
+      </g>
+      <g class="cls-33" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_36-2" data-name="Ellipse 36" class="cls-8" cx="20" cy="20" r="20" transform="translate(1608 320)"/>
+      </g>
+      <g class="cls-32" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_37-2" data-name="Ellipse 37" class="cls-8" cx="20" cy="20" r="20" transform="translate(1808 520)"/>
+      </g>
+      <g class="cls-31" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_38-2" data-name="Ellipse 38" class="cls-8" cx="20" cy="20" r="20" transform="translate(1758 470)"/>
+      </g>
+      <g class="cls-30" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_39-2" data-name="Ellipse 39" class="cls-8" cx="20" cy="20" r="20" transform="translate(1708 420)"/>
+      </g>
+      <g class="cls-29" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_40-2" data-name="Ellipse 40" class="cls-8" cx="20" cy="20" r="20" transform="translate(1658 370)"/>
+      </g>
+      <g class="cls-28" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_41-2" data-name="Ellipse 41" class="cls-8" cx="20" cy="20" r="20" transform="translate(1608 320)"/>
+      </g>
+      <g class="cls-27" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_42-2" data-name="Ellipse 42" class="cls-8" cx="20" cy="20" r="20" transform="translate(1308 920)"/>
+      </g>
+      <g class="cls-26" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_43-2" data-name="Ellipse 43" class="cls-8" cx="20" cy="20" r="20" transform="translate(1258 870)"/>
+      </g>
+      <g class="cls-25" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_44-2" data-name="Ellipse 44" class="cls-8" cx="20" cy="20" r="20" transform="translate(1208 820)"/>
+      </g>
+      <g class="cls-24" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_45-2" data-name="Ellipse 45" class="cls-8" cx="20" cy="20" r="20" transform="translate(1158 770)"/>
+      </g>
+      <g class="cls-23" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_46-2" data-name="Ellipse 46" class="cls-8" cx="20" cy="20" r="20" transform="translate(1158 470)"/>
+      </g>
+      <g class="cls-22" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_47-2" data-name="Ellipse 47" class="cls-8" cx="20" cy="20" r="20" transform="translate(1208 420)"/>
+      </g>
+      <g class="cls-21" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_48-2" data-name="Ellipse 48" class="cls-8" cx="20" cy="20" r="20" transform="translate(1258 370)"/>
+      </g>
+      <g class="cls-20" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_49-2" data-name="Ellipse 49" class="cls-8" cx="20" cy="20" r="20" transform="translate(1308 320)"/>
+      </g>
+      <g class="cls-19" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_50-2" data-name="Ellipse 50" class="cls-8" cx="20" cy="20" r="20" transform="translate(1608 920)"/>
+      </g>
+      <g class="cls-18" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_51-2" data-name="Ellipse 51" class="cls-8" cx="20" cy="20" r="20" transform="translate(1658 870)"/>
+      </g>
+      <g class="cls-17" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_52-2" data-name="Ellipse 52" class="cls-8" cx="20" cy="20" r="20" transform="translate(1708 820)"/>
+      </g>
+      <g class="cls-16" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_53-2" data-name="Ellipse 53" class="cls-8" cx="20" cy="20" r="20" transform="translate(1758 770)"/>
+      </g>
+      <g class="cls-15" transform="matrix(1, 0, 0, 1, 86, 2)">
+        <circle id="Ellipse_54-2" data-name="Ellipse 54" class="cls-8" cx="20" cy="20" r="20" transform="translate(1658 570)"/>
+      </g>
+      <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-9" width="50" height="50" transform="translate(1689 567)"/>
+      <rect id="Rectangle_15" data-name="Rectangle 15" class="cls-9" width="50" height="50" transform="translate(1639 567)"/>
+      <rect id="Rectangle_16" data-name="Rectangle 16" class="cls-9" width="50" height="50" transform="translate(1739 517)"/>
+      <rect id="Rectangle_17" data-name="Rectangle 17" class="cls-9" width="50" height="50" transform="translate(1739 467)"/>
+      <rect id="Rectangle_18" data-name="Rectangle 18" class="cls-9" width="50" height="50" transform="translate(1739 417)"/>
+      <rect id="Rectangle_19" data-name="Rectangle 19" class="cls-9" width="50" height="50" transform="translate(1689 517)"/>
+      <rect id="Rectangle_20" data-name="Rectangle 20" class="cls-9" width="50" height="50" transform="translate(1689 617)"/>
+      <rect id="Rectangle_21" data-name="Rectangle 21" class="cls-9" width="50" height="50" transform="translate(1739 617)"/>
+      <rect id="Rectangle_22" data-name="Rectangle 22" class="cls-9" width="50" height="50" transform="translate(1789 617)"/>
+      <rect id="Rectangle_23" data-name="Rectangle 23" class="cls-9" width="50" height="50" transform="translate(1789 567)"/>
+      <rect id="Rectangle_24" data-name="Rectangle 24" class="cls-9" width="50" height="50" transform="translate(1789 517)"/>
+      <rect id="Rectangle_25" data-name="Rectangle 25" class="cls-9" width="50" height="50" transform="translate(1839 567)"/>
+      <rect id="Rectangle_26" data-name="Rectangle 26" class="cls-9" width="50" height="50" transform="translate(1889 567)"/>
+      <rect id="Rectangle_27" data-name="Rectangle 27" class="cls-9" width="50" height="50" transform="translate(1739 667)"/>
+      <rect id="Rectangle_28" data-name="Rectangle 28" class="cls-9" width="50" height="50" transform="translate(1739 717)"/>
+      <rect id="Rectangle_29" data-name="Rectangle 29" class="cls-9" width="50" height="50" transform="translate(1739 767)"/>
+      <rect id="Rectangle_30" data-name="Rectangle 30" class="cls-9" width="50" height="50" transform="translate(1739 817)"/>
+      <rect id="Rectangle_31" data-name="Rectangle 31" class="cls-9" width="50" height="50" transform="translate(1839 667)"/>
+      <rect id="Rectangle_32" data-name="Rectangle 32" class="cls-9" width="50" height="50" transform="translate(1639 467)"/>
+      <rect id="Rectangle_33" data-name="Rectangle 33" class="cls-9" width="50" height="50" transform="translate(1589 417)"/>
+      <rect id="Rectangle_34" data-name="Rectangle 34" class="cls-9" width="50" height="50" transform="translate(1539 367)"/>
+      <rect id="Rectangle_35" data-name="Rectangle 35" class="cls-9" width="50" height="50" transform="translate(1489 317)"/>
+      <rect id="Rectangle_36" data-name="Rectangle 36" class="cls-9" width="50" height="50" transform="translate(1639 667)"/>
+      <rect id="Rectangle_37" data-name="Rectangle 37" class="cls-9" width="50" height="50" transform="translate(1589 717)"/>
+      <rect id="Rectangle_38" data-name="Rectangle 38" class="cls-9" width="50" height="50" transform="translate(1539 767)"/>
+      <rect id="Rectangle_39" data-name="Rectangle 39" class="cls-9" width="50" height="50" transform="translate(1489 817)"/>
+      <rect id="Rectangle_40" data-name="Rectangle 40" class="cls-9" width="50" height="50" transform="translate(1439 867)"/>
+      <g id="Groupe_41" data-name="Groupe 41" transform="translate(0 50)">
+        <g class="cls-14" transform="matrix(1, 0, 0, 1, 86, -48)">
+          <circle id="Ellipse_55-2" data-name="Ellipse 55" class="cls-7" cx="20" cy="20" r="20" transform="translate(1308 620)"/>
+        </g>
+        <rect id="Rectangle_41" data-name="Rectangle 41" class="cls-9" width="50" height="50" transform="translate(1389 517)"/>
+        <rect id="Rectangle_42" data-name="Rectangle 42" class="cls-9" width="50" height="50" transform="translate(1439 517)"/>
+        <rect id="Rectangle_43" data-name="Rectangle 43" class="cls-9" width="50" height="50" transform="translate(1439 567)"/>
+        <rect id="Rectangle_44" data-name="Rectangle 44" class="cls-9" width="50" height="50" transform="translate(1439 617)"/>
+        <rect id="Rectangle_45" data-name="Rectangle 45" class="cls-9" width="50" height="50" transform="translate(1389 617)"/>
+        <rect id="Rectangle_46" data-name="Rectangle 46" class="cls-9" width="50" height="50" transform="translate(1339 617)"/>
+        <rect id="Rectangle_47" data-name="Rectangle 47" class="cls-9" width="50" height="50" transform="translate(1339 567)"/>
+        <rect id="Rectangle_48" data-name="Rectangle 48" class="cls-9" width="50" height="50" transform="translate(1339 517)"/>
+      </g>
+    </g>
+  </g>
+  <g id="Groupe_26" data-name="Groupe 26" transform="translate(-651 45)">
+    <rect id="Rectangle_71" data-name="Rectangle 71" class="cls-10" width="50" height="50" transform="translate(2007 129)"/>
+    <text id="Case_de_déplacement" data-name="Case de déplacement" class="cls-11" transform="translate(2063 160)"><tspan x="0" y="0">Case de déplacement</tspan></text>
+  </g>
+</svg>
