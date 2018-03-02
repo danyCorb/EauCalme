@@ -19,12 +19,20 @@ public class MainDAO {
 	public MainDAO(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			String url = "jdbc:mysql://localhost:3306/thud";
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		String url = "jdbc:mysql://localhost:3306/thud";
 			String user = "root";
 			String passwd = "";
+		try {
 			conn = DriverManager.getConnection(url, user, passwd);
-		} catch (ClassNotFoundException | SQLException | InstantiationException | IllegalAccessException e1) {
-			e1.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 	

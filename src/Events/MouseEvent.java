@@ -4,6 +4,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import Data.DataMain;
+import Jeu.Jeu;
 
 public class MouseEvent implements MouseListener,MouseMotionListener{
 	
@@ -30,8 +31,8 @@ public class MouseEvent implements MouseListener,MouseMotionListener{
 
 	@Override
 	public void mousePressed(java.awt.event.MouseEvent arg0) {
-		System.out.println("click at:"+ arg0.getX()+" "+arg0.getY());
-		
+		int selectedCase[] = selectCase(arg0, DataMain.getInstance().getDataFenetre().getW(), DataMain.getInstance().getDataFenetre().getH());
+		Jeu.selectedCase(selectedCase[0], selectedCase[1]);
 	}
 
 	@Override

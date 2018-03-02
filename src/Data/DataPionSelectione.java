@@ -15,9 +15,12 @@ public class DataPionSelectione {
 		return y;
 	}
 
-	public void setY(int y) {
+	public void setY() {
 		this.y = y;
 	}
-	
+
+	public void unselectPion(){x=0; y=0;}
+
+	public boolean selectedPion(){return x!=0 || y!=0;}
 
 }

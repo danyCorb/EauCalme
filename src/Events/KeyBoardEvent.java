@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import Data.DataMain;
+import Jeu.Jeu;
 
 public class KeyBoardEvent implements KeyListener{
 	
@@ -26,6 +27,9 @@ public class KeyBoardEvent implements KeyListener{
 				break;
 			case 40:
 				donnees.getDataKeyboard().setY(donnees.getDataKeyboard().getY()-1);
+				break;
+			case 10:
+				Jeu.selectedCase(donnees.getDataKeyboard().getX(), donnees.getDataKeyboard().getY());
 				break;
 		}
 	}

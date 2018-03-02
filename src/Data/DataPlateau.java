@@ -48,4 +48,38 @@ public class DataPlateau {
 		}
 	}
 
+	public Pion getPionInCase(int x, int y){
+
+		for (int j=0; j<5; j++){
+			if (y==j && x<5-j || y==j && x>9+j){
+				return Pion.Null;
+			}
+		}
+
+		for (int j=0; j<5; j++){
+			if (y==j+10 && x<j+1 || y==j+10 && x>14-j){
+				return Pion.Null;
+			}
+		}
+
+		if (x==5 && y==0){
+			return plateau[0][0];
+		}else if (x==6 && y==0){
+			return plateau[0][1];
+		}else if (x==4 && y==1){
+			return plateau[1][0];
+		}else if (x==3 && y==2){
+			return plateau[2][0];
+		}
+
+		for (int j=0; j<5; j++){
+			for (int k=0; k<5; k++){
+				if (x==j+5 && y==0){
+					return plateau[0][j];
+				}
+			}
+		}
+
+	}
+
 }
