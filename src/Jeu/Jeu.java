@@ -1,9 +1,7 @@
 package Jeu;
 
 import Data.DataMain;
-import Data.DataPionSelectione;
-
-import javax.xml.crypto.Data;
+import Data.Pion;
 
 public class Jeu {
 
@@ -26,7 +24,8 @@ public class Jeu {
     }
 
     public static boolean rightMove(int caseX, int caseY, int caseX2, int caseY2){
-        Data.Pion stylePion = DataMain.getInstance().getDataPlateau()
+        Pion stylePion = DataMain.getInstance().getDataPlateau().getPionInCase(caseX, caseY);
+		return false;
     }
 
 }
