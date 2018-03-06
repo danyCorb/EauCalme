@@ -11,8 +11,6 @@ public class KeyBoardEvent implements KeyListener{
 	
 	@Override
 	public void keyPressed(KeyEvent arg0) {
-		System.out.println("Key down:"+arg0.getKeyCode());
-		
 		DataMain donnees = DataMain.getInstance();
 		
 		switch(arg0.getKeyCode()){
@@ -20,16 +18,19 @@ public class KeyBoardEvent implements KeyListener{
 				donnees.getDataKeyboard().setX(donnees.getDataKeyboard().getX()-1);
 				break;
 			case 38:
-				donnees.getDataKeyboard().setY(donnees.getDataKeyboard().getY()+1);
+				donnees.getDataKeyboard().setY(donnees.getDataKeyboard().getY()-1);
 				break;
 			case 39:
 				donnees.getDataKeyboard().setX(donnees.getDataKeyboard().getX()+1);
 				break;
 			case 40:
-				donnees.getDataKeyboard().setY(donnees.getDataKeyboard().getY()-1);
+				donnees.getDataKeyboard().setY(donnees.getDataKeyboard().getY()+1);
 				break;
 			case 10:
 				Jeu.selectedCase(donnees.getDataKeyboard().getX(), donnees.getDataKeyboard().getY());
+				break;
+			case 32: // espace
+				Jeu.endTrollSelection();
 				break;
 		}
 	}

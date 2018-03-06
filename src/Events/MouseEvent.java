@@ -32,7 +32,17 @@ public class MouseEvent implements MouseListener,MouseMotionListener{
 	@Override
 	public void mousePressed(java.awt.event.MouseEvent arg0) {
 		int selectedCase[] = selectCase(arg0, DataMain.getInstance().getDataFenetre().getW(), DataMain.getInstance().getDataFenetre().getH());
-		Jeu.selectedCase(selectedCase[0], selectedCase[1]);
+		if(Jeu.checkIsTrayCase(selectedCase[0], selectedCase[1])){
+			Jeu.selectedCase(selectedCase[0], selectedCase[1]);
+		}//g.fillRect(0, g.getFontMetrics().getHeight()*3+2, 80,  g.getFontMetrics().getHeight()+2);
+		else if(arg0.getX()>0&& arg0.getX()<80 && arg0.getY()>DataMain.getInstance().getDataFenetre().getFontSize()*3+2 && arg0.getY()<DataMain.getInstance().getDataFenetre().getFontSize()*4+2){
+			// accèpter trolle
+			Jeu.endTrollSelection();
+		}
+		else if(arg0.getX()>0&& arg0.getX()<80 && arg0.getY()>DataMain.getInstance().getDataFenetre().getFontSize()*2+2 && arg0.getY()<DataMain.getInstance().getDataFenetre().getFontSize()*3+2){
+			Jeu.ProposerAbandon();
+		}
+		
 	}
 
 	@Override

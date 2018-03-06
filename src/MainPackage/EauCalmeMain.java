@@ -1,13 +1,10 @@
 package MainPackage;
-import java.sql.Date;
-
-
-import DAO.JoueurDAO;
 import DAO.MainDAO;
 import Data.DataMain;
 import Events.KeyBoardEvent;
 import Events.MouseEvent;
 import Events.WindowEvent;
+import InterfaceGraphique.AbandonPan;
 import InterfaceGraphique.DrawingPan;
 import InterfaceGraphique.Fenetre;
 import InterfaceGraphique.JoueurContreIAPanel;
@@ -29,6 +26,7 @@ public class EauCalmeMain {
 	private static SelectNamePanel snp=new SelectNamePanel();
 	private static MenuPanel mp=new MenuPanel();
 	private static JoueurContreIAPanel jcIAp=new JoueurContreIAPanel();
+	public static AbandonPan ap=new AbandonPan();
 	
 	
 
@@ -38,8 +36,10 @@ public class EauCalmeMain {
 		
 		
 		f.addWindowListener(we);
-		f.addMouseListener(me);
-		f.addKeyListener(kbe);
+		dp.addMouseListener(me);
+		dp.addMouseMotionListener(me);
+		dp.addKeyListener(kbe);
+		
 		
 		f.setVisible(true);
 		
@@ -53,11 +53,25 @@ public class EauCalmeMain {
 	public static void setGamePanel(){
 		f.setContentPane(dp);
 		f.setVisible(true);
+		DataMain.getInstance().getDataFenetre().setW(f.getContentPane().getWidth());
+		DataMain.getInstance().getDataFenetre().setH(f.getContentPane().getHeight());
 		f.LaunchDrawing();
 	}
 	public static void setChoseIpPanel(){
 		f.setContentPane(jcIAp);
 		f.setVisible(true);
+	}
+	
+	public static void setAbandontPan(){
+		f.setContentPane(ap);
+		f.setVisible(true);
+	}
+	
+	public static void returnToGame(){
+		f.setContentPane(dp);
+		f.setVisible(true);
+		DataMain.getInstance().getDataFenetre().setW(f.getContentPane().getWidth());
+		DataMain.getInstance().getDataFenetre().setH(f.getContentPane().getHeight());
 	}
 	
 

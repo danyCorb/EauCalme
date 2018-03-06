@@ -21,9 +21,6 @@ public class Fenetre extends JFrame{
 	    this.setResizable(false);
 	    
 	    this.setSize(600, 600);
-		DataMain.getInstance().getDataFenetre().setH(600);
-		DataMain.getInstance().getDataFenetre().setW(600);
-
 	}
 	
 	
@@ -32,6 +29,7 @@ public class Fenetre extends JFrame{
 	 */
 	public void LaunchDrawing(){
 		dt=new DrawingThread();
+		this.getContentPane().requestFocus();
 		dt.start();
 	}
 	
@@ -59,14 +57,6 @@ public class Fenetre extends JFrame{
 		System.exit(0);
 	}
 	
-	
-	public void addMouseListener(MouseEvent ml){
-		this.getContentPane().addMouseListener(ml);
-		this.getContentPane().addMouseMotionListener(ml);
-	}
-	public void addKeyListener(KeyBoardEvent ml){
-		super.addKeyListener(ml);
-	}
 	
 	
 }

@@ -1,7 +1,7 @@
 package Data;
 
 public class DataFenetre {
-	private int w,h;
+	private int w,h,fontSize;
 
 	public int getW() {
 		return w;
@@ -17,6 +17,14 @@ public class DataFenetre {
 
 	public void setH(int h) {
 		this.h = h;
+	}
+
+	public int getFontSize() {
+		return fontSize;
+	}
+
+	public void setFontSize(int fontSize) {
+		this.fontSize = fontSize;
 	}
 	
 

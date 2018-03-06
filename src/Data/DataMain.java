@@ -14,6 +14,7 @@ public class DataMain {
 	private DataPionSelectione dataPionSelectione;
 	private DataFenetre dataFenetre;
 	private DataPlayer dataPlayer;
+	private DataTrolleSelection dataTrolleSelection;
 
 	private DataMain(){
 		dataKeyboard=new DataKeyborad();
@@ -22,6 +23,7 @@ public class DataMain {
 		dataPionSelectione=new DataPionSelectione();
 		dataFenetre=new DataFenetre();
 		dataPlayer=new DataPlayer();
+		dataTrolleSelection=new DataTrolleSelection();
 	}
 
 
@@ -53,6 +55,11 @@ public class DataMain {
 
 	public DataPlayer getDataPlayer() {
 		return dataPlayer;
+	}
+
+
+	public DataTrolleSelection getDataTrolleSelection() {
+		return dataTrolleSelection;
 	}
 
 

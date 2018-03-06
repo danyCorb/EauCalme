@@ -6,18 +6,49 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 import Data.DataMain;
+import Data.Pion;
+import Jeu.Jeu;
 
 public class DrawingPan extends JPanel{
 	
 	public void paintComponent(Graphics g){
 		DataMain dm=DataMain.getInstance();
+		dm.getDataFenetre().setFontSize(g.getFontMetrics().getHeight());
+		
 		AffGrid(g);
-		posPion(g, DataMain.getInstance().getDataPionSelectione().getX(), DataMain.getInstance().getDataPionSelectione().getX(), new Color(255, 0 ,0, 75));
-		g.setColor(new Color(0,255,255));
-		pionMove(g , new int []{1,3,7},  new int []{1,3,7});
-		//g.setColor(new Color(0,255,255));
-		//g.fillRect(50, 50, this.getWidth(), 50);
+		dessinerPionsSurLePlateau(g);
+		dessinerCaseActuel(g,dm.getDataKeyboard().getX(),dm.getDataKeyboard().getY());
+		
+		
+		// dessin des deplacement possibles
+		if(Jeu.checkIsTrayCase(dm.getDataPionSelectione().getX(), dm.getDataPionSelectione().getY()) && !dm.getDataTrolleSelection().isSelectionMode()){
+			dessinerPionSelcetionne(g, dm.getDataPionSelectione().getX(), dm.getDataPionSelectione().getY());
+			pionMove(g, dm.getDataPionSelectione().getCaseDispoDeplacement()[0], dm.getDataPionSelectione().getCaseDispoDeplacement()[1]);
+			dessinerCaseDeplacementSpecial(g,dm.getDataPionSelectione().getCaseDeplacementSpecial());
+		}
+		else if(dm.getDataTrolleSelection().isSelectionMode()){ // trolle mode
+			dessinerTrolleBoutonEtCases(g, dm);
+		}
+		
+		// dessin du score
+		dessinerScore(g, dm);
+		
+		dessinerBoutonAbandonner(g);
+		
 	}
+	
+	public void dessinerPionsSurLePlateau(Graphics g){
+		for(int j=0;j<15;j++){
+			for(int k=0;k<15;k++){
+				Pion p=DataMain.getInstance().getDataPlateau().getPionInCase(j, k);
+				if(p==Pion.Nain)
+					AfficheNain(g, j, k);
+				else if(p==Pion.Trolle)
+					AfficheTroll(g, j, k);
+			}
+		}
+	}
+	
 	public void AffGrid(Graphics g){
 		double Wscreen = this.getWidth();
 		double Hscreen = this.getHeight();
@@ -79,7 +110,7 @@ public class DrawingPan extends JPanel{
 		double Hscreen = this.getHeight();
 		double trollw = Wscreen/15;
 		double trollh = Hscreen/15;
-		g.fillOval(x, y, (int)trollw, (int)trollh);
+		g.fillOval((int)(x*trollw)+2, (int)(y*trollh)+2, (int)trollw-4, (int)trollh-4);
 	}
 	public void AfficheNain (Graphics g, int x, int y){
 		g.setColor(new Color(0,0,255));
@@ -87,7 +118,7 @@ public class DrawingPan extends JPanel{
 		double Hscreen = this.getHeight();
 		double nainw = Wscreen/15;
 		double nainh = Hscreen/15;
-		g.fillOval(x, y, (int)nainw, (int)nainh);
+		g.fillOval((int)(x*nainw)+2, (int)(y*nainh)+2, (int)nainw-4, (int)nainh-4);
 	}
 	public void posPion (Graphics g, int x ,int y, Color c){
 		g.setColor(c);
@@ -95,13 +126,61 @@ public class DrawingPan extends JPanel{
 		double Hscreen = this.getHeight();
 		double casew = Wscreen/15;
 		double caseh = Hscreen/15;
-		g.fillRect((int) (x*casew), (int) (y*caseh), (int)casew, (int)caseh);
+		g.fillRect((int) (x*casew), (int) (y*caseh), (int)casew+1, (int)caseh+1);
 	}
 	public void pionMove (Graphics g, int x[], int y []){
 		for (int i = 0; i<x.length; i++){
-			posPion(g, x[i], x[i], new Color(255, 255 ,0, 75));
+			posPion(g, x[i], y[i], new Color(255, 255 ,0, 75));
 		}
 	}
 	
+	public void dessinerCaseActuel(Graphics g,int x,int y){
+		posPion(g, x, y, new Color(128,128,255,128));
+	}
+	public void dessinerPionSelcetionne(Graphics g,int x,int y){
+		posPion(g, x, y, new Color(255, 0 ,0, 75));
+	}
+	
+	public void dessinerCaseDeplacementSpecial(Graphics g,int cases[][]){
+		int j;
+		for(j=0;j<cases.length;j++){
+			posPion(g,cases[j][0], cases[j][1], new Color(255,128,0,128));
+		}
+	}
+	
+	public void dessinerScore(Graphics g,DataMain dm){
+		g.setColor(new Color(0,0,0));
+		int pointT=dm.getDataPlateau().getPointTrolle();
+		int pointN=dm.getDataPlateau().getPointNain();
+		g.drawString("Trolle : "+pointT,0, g.getFontMetrics().getHeight());
+		g.drawString("Nain : "+pointN,0, g.getFontMetrics().getHeight()*2);
+	}
+	
+	public void dessinerBoutonAbandonner(Graphics g){
+		g.setColor(new Color(100,100,100));
+		g.fillRect(0, g.getFontMetrics().getHeight()*2+2, 80,  g.getFontMetrics().getHeight()+2);
+		g.setColor(new Color(255,255,255));
+		g.drawString("Abandonner",0, g.getFontMetrics().getHeight()*3);
+	}
+	
+	public void dessinerTrolleBoutonEtCases(Graphics g, DataMain dm){
+		g.setColor(new Color(100,100,100));
+		g.fillRect(0, g.getFontMetrics().getHeight()*3+2, 80,  g.getFontMetrics().getHeight()+2);
+		g.setColor(new Color(255,255,255));
+		g.drawString("Valider la prise",0, g.getFontMetrics().getHeight()*4);
+		
+		for(int j=0;j<3;j++){
+			for(int k=0;k<3;k++){
+				if(dm.getDataPlateau().getPionInCase(j+dm.getDataTrolleSelection().getCaseX()-1, k+dm.getDataTrolleSelection().getCaseY()-1)==Pion.Nain){
+					posPion(g,j+dm.getDataTrolleSelection().getCaseX()-1 , k+dm.getDataTrolleSelection().getCaseY()-1, new Color(230,128,0,100));
+				}
+			}
+		}
+		
+		for(int j=0;j<dm.getDataTrolleSelection().getListeCase().size();j++){
+			posPion(g,dm.getDataTrolleSelection().getListeCase().get(j)[0] , dm.getDataTrolleSelection().getListeCase().get(j)[1], new Color(230,128,0,128));
+		}
+		
+	}
 	
 }
