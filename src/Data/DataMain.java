@@ -15,7 +15,7 @@ public class DataMain {
 	private DataFenetre dataFenetre;
 	private DataPlayer dataPlayer;
 	private DataTrolleSelection dataTrolleSelection;
-
+	
 	private DataMain(){
 		dataKeyboard=new DataKeyborad();
 		dataMouse=new DataMouse();

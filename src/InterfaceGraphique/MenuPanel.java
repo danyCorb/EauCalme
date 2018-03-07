@@ -15,7 +15,8 @@ public class MenuPanel extends JPanel{
 		nouvellePartieContreIA=new JButton("Nouvelle partie contre une IA"),
 		nouvellePartieContreUnAutreJoueur=new JButton("Nouvelle partie contre un joueur"),
 		voirLesScores=new JButton("Voir les scores"),
-		voirUnePartie=new JButton("Voir une partie (replay)");
+		voirUnePartie=new JButton("Voir une partie (replay)"),
+		joueurAIContreIA=new JButton("Jouer IA contre IA");
 	private Box vBox=Box.createVerticalBox();
 		
 	public MenuPanel(){
@@ -24,6 +25,7 @@ public class MenuPanel extends JPanel{
 		vBox.add(nouvellePartieContreUnAutreJoueur);
 		vBox.add(voirLesScores);
 		vBox.add(voirUnePartie);
+		vBox.add(joueurAIContreIA);
 		
 		nouvellePartieContreIA.addActionListener(new ActionListener(){
 			@Override
@@ -35,18 +37,25 @@ public class MenuPanel extends JPanel{
 		nouvellePartieContreUnAutreJoueur.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				EauCalmeMain.setChoseIpPanel();
+				EauCalmeMain.setModeMultiPanel();
 			}
 		});
 		
 		voirLesScores.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				EauCalmeMain.setGamePanel();
+				EauCalmeMain.setScorePanel();
 			}
 		});
 		
 		voirUnePartie.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				EauCalmeMain.setVoirPartiePanel();
+			}
+		});
+		
+		joueurAIContreIA.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				EauCalmeMain.setGamePanel();
