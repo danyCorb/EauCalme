@@ -1,6 +1,5 @@
 package MainPackage;
 import java.io.IOException;
-import java.net.UnknownHostException;
 
 import DAO.MainDAO;
 import Data.DataMain;
@@ -9,15 +8,15 @@ import Events.MouseEvent;
 import Events.WindowEvent;
 import InterfaceGraphique.AbandonPan;
 import InterfaceGraphique.DrawingPan;
+import InterfaceGraphique.EnAttentePanel;
 import InterfaceGraphique.Fenetre;
 import InterfaceGraphique.JoueurContreIAPanel;
 import InterfaceGraphique.MenuPanel;
 import InterfaceGraphique.SelectNamePanel;
-import InterfaceGraphique.ServeurOuCLientPanel;
 import InterfaceGraphique.VoirPartiePanel;
 import InterfaceGraphique.VoirScorePanel;
-import Reseau.Client;
-import Reseau.Serveur;
+import Reseau.APIClient;
+import Reseau.APIServeur;
 
 public class EauCalmeMain {
 	
@@ -35,13 +34,12 @@ public class EauCalmeMain {
 	private static MenuPanel mp=new MenuPanel();
 	private static JoueurContreIAPanel jcIAp=new JoueurContreIAPanel();
 	public static AbandonPan ap=new AbandonPan();
-	private static ServeurOuCLientPanel soclp=new ServeurOuCLientPanel();
 	private static EnAttentePanel eap=new EnAttentePanel();
 	private static VoirScorePanel vsp=new VoirScorePanel();
 	private static VoirPartiePanel vpp=new VoirPartiePanel();
 	
-	private static Serveur serveur;
-	private static Client client;
+	private static APIServeur serveur;
+	private static APIClient client;
 	
 
 	public static void main(String[] args) {
@@ -53,7 +51,6 @@ public class EauCalmeMain {
 		dp.addMouseListener(me);
 		dp.addMouseMotionListener(me);
 		dp.addKeyListener(kbe);
-		
 		
 		
 		f.setVisible(true);
@@ -89,10 +86,6 @@ public class EauCalmeMain {
 		DataMain.getInstance().getDataFenetre().setH(f.getContentPane().getHeight());
 	}
 	
-	public static void setModeMultiPanel(){
-		f.setContentPane(soclp);
-		f.setVisible(true);
-	}
 	
 	public static void setEnAttente(){
 		f.setContentPane(eap);
@@ -110,13 +103,16 @@ public class EauCalmeMain {
 		f.setVisible(true);
 	}
 	
-	public static void startServeur() throws IOException{
-		serveur=new Serveur();
-		serveur.launchServeur();
-	}
-	
-	public static void startClient(String ip) throws UnknownHostException, IOException{
-		client=new Client(ip, 80);
+	public static void startCommunication(String url,int port){
+		try {
+			serveur=new APIServeur(port);
+			client=new APIClient(url);
+			EauCalmeMain.setGamePanel();
+			DataMain.getInstance().getFileRequeteGet().offer("stack trace test request");
+		} catch (IOException e) {
+			e.printStackTrace();
+			EauCalmeMain.setMenuPanel();
+		}
 	}
 	
 	

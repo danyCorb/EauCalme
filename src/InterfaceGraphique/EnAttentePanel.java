@@ -1,4 +1,4 @@
-package MainPackage;
+package InterfaceGraphique;
 
 import javax.swing.Box;
 import javax.swing.JLabel;

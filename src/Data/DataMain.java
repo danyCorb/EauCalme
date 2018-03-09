@@ -1,5 +1,8 @@
 package Data;
 
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 public class DataMain {
 
 
@@ -16,6 +19,9 @@ public class DataMain {
 	private DataPlayer dataPlayer;
 	private DataTrolleSelection dataTrolleSelection;
 	
+	
+	private Queue<String> fileRequeteGet;
+	
 	private DataMain(){
 		dataKeyboard=new DataKeyborad();
 		dataMouse=new DataMouse();
@@ -24,6 +30,8 @@ public class DataMain {
 		dataFenetre=new DataFenetre();
 		dataPlayer=new DataPlayer();
 		dataTrolleSelection=new DataTrolleSelection();
+		
+		fileRequeteGet=new PriorityQueue<>();
 	}
 
 
@@ -63,7 +71,12 @@ public class DataMain {
 	}
 
 
+	public Queue<String> getFileRequeteGet() {
+		return fileRequeteGet;
+	}
 
+
+	
 
 
 

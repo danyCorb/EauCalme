@@ -37,7 +37,7 @@ public class MenuPanel extends JPanel{
 		nouvellePartieContreUnAutreJoueur.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				EauCalmeMain.setModeMultiPanel();
+				EauCalmeMain.setChoseIpPanel();
 			}
 		});
 		
