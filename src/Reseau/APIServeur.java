@@ -12,6 +12,7 @@ import Data.DataMain;
 
 public class APIServeur {
 	
+	
 	public APIServeur(int port) throws IOException{
 		System.out.println("Serveur start port "+port);
 		HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
@@ -23,8 +24,8 @@ public class APIServeur {
 	static class MyHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
-        	System.out.println("request receve");
             String response = DataMain.getInstance().getFileRequeteGet().poll();
+            System.out.println("request receve , return :"+response);
             t.sendResponseHeaders(200, response.length());
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());

@@ -15,6 +15,7 @@ import InterfaceGraphique.MenuPanel;
 import InterfaceGraphique.SelectNamePanel;
 import InterfaceGraphique.VoirPartiePanel;
 import InterfaceGraphique.VoirScorePanel;
+import Jeu.JouerPartieJoueurContreJoueur;
 import Reseau.APIClient;
 import Reseau.APIServeur;
 
@@ -38,8 +39,8 @@ public class EauCalmeMain {
 	private static VoirScorePanel vsp=new VoirScorePanel();
 	private static VoirPartiePanel vpp=new VoirPartiePanel();
 	
-	private static APIServeur serveur;
-	private static APIClient client;
+	public static APIServeur serveur;
+	public static APIClient client;
 	
 
 	public static void main(String[] args) {
@@ -98,6 +99,7 @@ public class EauCalmeMain {
 		f.setVisible(true);
 	}
 	
+	
 	public static void setVoirPartiePanel(){
 		f.setContentPane(vpp);
 		f.setVisible(true);
@@ -108,7 +110,17 @@ public class EauCalmeMain {
 			serveur=new APIServeur(port);
 			client=new APIClient(url);
 			EauCalmeMain.setGamePanel();
-			DataMain.getInstance().getFileRequeteGet().offer("stack trace test request");
+			
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			JouerPartieJoueurContreJoueur jpjcj=new JouerPartieJoueurContreJoueur();
+			if(!jpjcj.startJeu()){ // echec de connexion
+				EauCalmeMain.setMenuPanel();
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 			EauCalmeMain.setMenuPanel();
