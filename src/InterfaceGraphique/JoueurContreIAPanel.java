@@ -1,10 +1,7 @@
 package InterfaceGraphique;
 
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.net.UnknownHostException;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -12,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import Data.DataMain;
+import Jeu.Jeu;
 import MainPackage.EauCalmeMain;
 
 public class JoueurContreIAPanel extends JPanel{
@@ -38,7 +35,7 @@ public class JoueurContreIAPanel extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				if(jtf1.getText().compareTo("")!=0 && jtf2.getText().compareTo("")!=0){
-					EauCalmeMain.startCommunication(jtf1.getText(),Integer.parseInt(jtf2.getText()));
+					EauCalmeMain.startCommunication(jtf1.getText(),Integer.parseInt(jtf2.getText()),new Jeu());
 				}
 			}
 		});

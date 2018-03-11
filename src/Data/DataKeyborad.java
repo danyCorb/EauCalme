@@ -1,6 +1,7 @@
 package Data;
 
 import Jeu.Jeu;
+import MainPackage.EauCalmeMain;
 
 public class DataKeyborad {
 	private int x;
@@ -17,14 +18,14 @@ public class DataKeyborad {
 		return x;
 	}
 	public void setX(int x) {
-		if(Jeu.checkIsTrayCase(x, this.y))
+		if(EauCalmeMain.jl.checkIsTrayCase(x, this.y))
 			this.x = x;
 	}
 	public int getY() {
 		return y;
 	}
 	public void setY(int y) {
-		if(Jeu.checkIsTrayCase(this.x, y))
+		if(EauCalmeMain.jl.checkIsTrayCase(this.x, y))
 			this.y = y;
 	}
 	public boolean isSpacePress() {

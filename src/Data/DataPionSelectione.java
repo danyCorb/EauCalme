@@ -2,8 +2,8 @@ package Data;
 
 public class DataPionSelectione {
 	private int x,y;
-	private int[][] caseDispoDeplacement;
-	private int[][] caseDeplacementSpecial;
+	private int[][] caseDispoDeplacement; // [2][j]
+	private int[][] caseDeplacementSpecial; // [j][2]
 
 	public int getX() {
 		return x;
@@ -39,6 +39,20 @@ public class DataPionSelectione {
 
 	public void setCaseDeplacementSpecial(int[][] caseDeplacementSpecial) {
 		this.caseDeplacementSpecial = caseDeplacementSpecial;
+	}
+	
+	public boolean estUneCasePourDeplacement(int x,int y){
+		if(this.selectedPion()){
+			for(int j=0;j<caseDispoDeplacement[0].length;j++){
+				if(caseDispoDeplacement[0][j]==x && caseDispoDeplacement[1][j]==y)
+					return true;
+			}
+			for(int j=0;j<caseDeplacementSpecial.length;j++){
+				if(caseDeplacementSpecial[j][0]==x && caseDeplacementSpecial[j][1]==y)
+					return true;
+			}
+		}
+		return false;
 	}
 	
 	

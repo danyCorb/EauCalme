@@ -5,6 +5,7 @@ import java.awt.event.KeyListener;
 
 import Data.DataMain;
 import Jeu.Jeu;
+import MainPackage.EauCalmeMain;
 
 public class KeyBoardEvent implements KeyListener{
 	
@@ -27,10 +28,10 @@ public class KeyBoardEvent implements KeyListener{
 				donnees.getDataKeyboard().setY(donnees.getDataKeyboard().getY()+1);
 				break;
 			case 10:
-				Jeu.selectedCase(donnees.getDataKeyboard().getX(), donnees.getDataKeyboard().getY());
+				EauCalmeMain.jl.selectedCase(donnees.getDataKeyboard().getX(), donnees.getDataKeyboard().getY());
 				break;
 			case 32: // espace
-				Jeu.endTrollSelection();
+				EauCalmeMain.jl.endTrollSelection();
 				break;
 		}
 	}

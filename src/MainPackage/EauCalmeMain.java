@@ -10,12 +10,15 @@ import InterfaceGraphique.AbandonPan;
 import InterfaceGraphique.DrawingPan;
 import InterfaceGraphique.EnAttentePanel;
 import InterfaceGraphique.Fenetre;
+import InterfaceGraphique.FinDePartiePan;
 import InterfaceGraphique.JoueurContreIAPanel;
 import InterfaceGraphique.MenuPanel;
 import InterfaceGraphique.SelectNamePanel;
+import InterfaceGraphique.ValiderAbandonPan;
 import InterfaceGraphique.VoirPartiePanel;
 import InterfaceGraphique.VoirScorePanel;
-import Jeu.JouerPartieJoueurContreJoueur;
+import Jeu.Jeu;
+import Jeu.JeuListener;
 import Reseau.APIClient;
 import Reseau.APIServeur;
 
@@ -38,10 +41,13 @@ public class EauCalmeMain {
 	private static EnAttentePanel eap=new EnAttentePanel();
 	private static VoirScorePanel vsp=new VoirScorePanel();
 	private static VoirPartiePanel vpp=new VoirPartiePanel();
+	private static ValiderAbandonPan vap=new ValiderAbandonPan();
+	private static FinDePartiePan fpp=new FinDePartiePan();
 	
 	public static APIServeur serveur;
 	public static APIClient client;
 	
+	public static JeuListener jl=new Jeu();
 
 	public static void main(String[] args) {
 		
@@ -105,7 +111,19 @@ public class EauCalmeMain {
 		f.setVisible(true);
 	}
 	
-	public static void startCommunication(String url,int port){
+	public static void setValiderAbandonPanel(int trolle,int nain,int mancheAv[]){
+		vap.setScore(trolle,nain, mancheAv);
+		f.setContentPane(vap);
+		f.setVisible(true);
+	}
+	
+	public static void setFinDePartiePan(int scoreMoi,int scoreAdv){
+		fpp.setScore(scoreMoi, scoreAdv);
+		f.setContentPane(fpp);
+		f.setVisible(true);
+	}
+	
+	public static void startCommunication(String url,int port,JeuListener jeu ){
 		try {
 			serveur=new APIServeur(port);
 			client=new APIClient(url);
@@ -117,8 +135,8 @@ public class EauCalmeMain {
 				e.printStackTrace();
 			}
 			
-			JouerPartieJoueurContreJoueur jpjcj=new JouerPartieJoueurContreJoueur();
-			if(!jpjcj.startJeu()){ // echec de connexion
+			jl=jeu;
+			if(!jl.startJeu()){ // echec de connexion
 				EauCalmeMain.setMenuPanel();
 			}
 		} catch (IOException e) {

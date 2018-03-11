@@ -46,7 +46,7 @@ public class APIClient {
 		in.close();
 
 		//print result
-		System.out.println(response.toString());
+		//System.out.println(response.toString());
 		return ret;
 	}
 
@@ -85,7 +85,7 @@ public class APIClient {
 		in.close();
 
 		//print result
-		System.out.println(response.toString());
+		//System.out.println(response.toString());
 
 	}
 

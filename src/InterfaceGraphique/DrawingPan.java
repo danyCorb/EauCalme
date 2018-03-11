@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import Data.DataMain;
 import Data.Pion;
 import Jeu.Jeu;
+import MainPackage.EauCalmeMain;
 
 public class DrawingPan extends JPanel{
 	
@@ -21,7 +22,7 @@ public class DrawingPan extends JPanel{
 		
 		
 		// dessin des deplacement possibles
-		if(Jeu.checkIsTrayCase(dm.getDataPionSelectione().getX(), dm.getDataPionSelectione().getY()) && !dm.getDataTrolleSelection().isSelectionMode()){
+		if(EauCalmeMain.jl.checkIsTrayCase(dm.getDataPionSelectione().getX(), dm.getDataPionSelectione().getY()) && !dm.getDataTrolleSelection().isSelectionMode()){
 			dessinerPionSelcetionne(g, dm.getDataPionSelectione().getX(), dm.getDataPionSelectione().getY());
 			pionMove(g, dm.getDataPionSelectione().getCaseDispoDeplacement()[0], dm.getDataPionSelectione().getCaseDispoDeplacement()[1]);
 			dessinerCaseDeplacementSpecial(g,dm.getDataPionSelectione().getCaseDeplacementSpecial());
@@ -103,6 +104,14 @@ public class DrawingPan extends JPanel{
 		double pierrew = Wscreen/15;
 		double pierreh = Hscreen/15;
 		g.fillOval((int)pierrex, (int)pierrey, (int)pierrew, (int)pierreh);
+		
+		// dessin d'un rectangle gris si ce n'est pas le tour
+		if(!EauCalmeMain.jl.getTour()){
+			g.setColor(new Color(128,128,128,128));
+			g.fillRect(0,0, (int)Wscreen, (int)Hscreen);
+		}
+			
+		
 	}
 	public void AfficheTroll (Graphics g, int x, int y){
 		g.setColor(new Color(255,0,0));
