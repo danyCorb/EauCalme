@@ -4,39 +4,37 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.text.html.StyleSheet.ListPainter;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import DAO.DeplacementDAO;
+import DAO.DeplacementParPartieDAO;
+import DAO.PartieDAO;
+import DAO.PositionDAO;
+import DAO.TrollParDeplacementDAO;
 import Data.DataMain;
 import Data.DataPionSelectione;
 import Data.Pion;
+import Entite.Deplacement;
+import Entite.Position;
 import MainPackage.EauCalmeMain;
 import Reseau.JSonGenerator;
 
 public class Jeu implements JeuListener  {
-	private boolean start;
-	private int manche;
-	private boolean monTour=false;
-	private boolean jeProposeAbandon=false;
 	private int trolleMouvement[][]=null;
 	private static long tempsAttenteEntreCoup=30*1000;
+	public static int nbDemandeAbandontMax=15;
 	
-	public int valideAbandon=0;
-	public int scorePartie1[]=null;
 	
 	public Jeu(){
 		DataMain.getInstance().getDataPionSelectione().unselectPion();
 		DataMain.getInstance().getDataPlateau().writeInitPlateau();
-		start=false;
-		manche=1;
+		DataMain.getInstance().getDataPartie().initNewGame();
 
 
 		JSonGenerator.setShot(0);
-		this.jeProposeAbandon=false;
 		
 	}
 
@@ -64,11 +62,14 @@ public class Jeu implements JeuListener  {
 		            		
 		            		if(!DataMain.getInstance().getDataTrolleSelection().isSelectionMode())
 		            		{
-		            			DataMain.getInstance().getFileRequeteGet().offer(JSonGenerator.genererDeplacement(caseX, caseY, posX, posY, listPrise,jeProposeAbandon,nainCase));
-								// deplacement
+		            			// deplacement
+		            			DataMain.getInstance().getFileRequeteGet().offer(JSonGenerator.genererDeplacement(caseX, caseY, posX, posY, listPrise,DataMain.getInstance().getDataPartie().isJeProposeAbandon(),nainCase));
+								// deplacement dans BDD
+		            			this.addDeplacementToBDD(caseX, caseY, posX, posY, listPrise);
 		            			
 		            			
-								monTour=false;
+		            			// fin du tour
+								DataMain.getInstance().getDataPartie().finDeMonTour();
 								
 								// reception information
 								this.coupAdverce();
@@ -88,12 +89,11 @@ public class Jeu implements JeuListener  {
 	            	else
 	            		DataMain.getInstance().getDataPionSelectione().unselectPion();
 	            	
-	            	
 	            }else{
 	            	if(DataMain.getInstance().getDataPlateau().getPionInCase(posX, posY)!=Pion.Vide){
 	            		Pion pionActuel=DataMain.getInstance().getDataPlateau().getPionInCase(posX, posY);
-	            		if( (start&&manche==1&&pionActuel==Pion.Nain) || (start&&manche==2&&pionActuel==Pion.Trolle) || 
-	                			(!start&&manche==1&&pionActuel==Pion.Trolle) || (!start&&manche==2&&pionActuel==Pion.Nain)	){
+	            		if( (DataMain.getInstance().getDataPartie().isiStart()&&DataMain.getInstance().getDataPartie().getManche()==1&&pionActuel==Pion.Nain) || (DataMain.getInstance().getDataPartie().isiStart()&&DataMain.getInstance().getDataPartie().getManche()==2&&pionActuel==Pion.Trolle) || 
+	                			(!DataMain.getInstance().getDataPartie().isiStart()&&DataMain.getInstance().getDataPartie().getManche()==1&&pionActuel==Pion.Trolle) || (!DataMain.getInstance().getDataPartie().isiStart()&&DataMain.getInstance().getDataPartie().getManche()==2&&pionActuel==Pion.Nain)	){
 		            		DataMain.getInstance().getDataPionSelectione().setX(posX);
 		                    DataMain.getInstance().getDataPionSelectione().setY(posY);
 		                    DataMain.getInstance().getDataPionSelectione().setCaseDispoDeplacement(this.getCaseValidePourDeplacement(posX, posY));
@@ -602,7 +602,7 @@ public class Jeu implements JeuListener  {
     }
     
     
-    public void deplacerPiece(DataPionSelectione dps, int newCaseX,int newCaseY){
+    public int deplacerPiece(DataPionSelectione dps, int newCaseX,int newCaseY){
     	int j,k;
     	if(dps.getCaseDispoDeplacement().length>0)
 	    	for(j=0;j<dps.getCaseDispoDeplacement()[0].length;j++){
@@ -613,6 +613,7 @@ public class Jeu implements JeuListener  {
 	    					for(int m=0;m<3;m++){
 	    						if(DataMain.getInstance().getDataPlateau().getPionInCase( newCaseX+l-1, newCaseY+m-1)==Pion.Nain){
 	    							DataMain.getInstance().getDataTrolleSelection().startNewTrollePrise(newCaseX, newCaseY);
+	    							return 1;
 	    						}
 	    					}
 	    				}
@@ -626,22 +627,25 @@ public class Jeu implements JeuListener  {
 	    			DataMain.getInstance().getDataPlateau().bougerPiece(dps.getX(), dps.getY(), newCaseX, newCaseY);
 	    			if(DataMain.getInstance().getDataPlateau().getPionInCase(newCaseX,newCaseY)==Pion.Trolle){
 	    				DataMain.getInstance().getDataTrolleSelection().startNewTrollePrise(newCaseX, newCaseY);
+	    				return 2;
 	    			}
 	    			
 	    		}
 	    	}
+    	return 0;
     }
     
     public void endTrollSelection(){
     	// envoi des données
     	try {
-			DataMain.getInstance().getFileRequeteGet().offer(JSonGenerator.genererDeplacement(trolleMouvement[0][0], trolleMouvement[0][1], trolleMouvement[1][0], trolleMouvement[1][1], DataMain.getInstance().getDataTrolleSelection().getListeCase(),jeProposeAbandon,null));
+			DataMain.getInstance().getFileRequeteGet().offer(JSonGenerator.genererDeplacement(trolleMouvement[0][0], trolleMouvement[0][1], trolleMouvement[1][0], trolleMouvement[1][1], DataMain.getInstance().getDataTrolleSelection().getListeCase(),DataMain.getInstance().getDataPartie().isJeProposeAbandon(),null));
+			this.addDeplacementToBDD(trolleMouvement[0][0], trolleMouvement[0][1], trolleMouvement[1][0], trolleMouvement[1][1], DataMain.getInstance().getDataTrolleSelection().getListeCase());
 			for(int j=0;j<DataMain.getInstance().getDataTrolleSelection().getListeCase().size();j++){
 	    		DataMain.getInstance().getDataPlateau().killNain(DataMain.getInstance().getDataTrolleSelection().getListeCase().get(j)[0],DataMain.getInstance().getDataTrolleSelection().getListeCase().get(j)[1]);
 	    	}
 	    	DataMain.getInstance().getDataTrolleSelection().endTrollePrise();
 	    	
-	    	monTour=false;
+	    	DataMain.getInstance().getDataPartie().finDeMonTour();
 	    	
 	    	this.coupAdverce();
 	    	
@@ -650,11 +654,19 @@ public class Jeu implements JeuListener  {
     }
     
     public void ProposerAbandon(){
-    	EauCalmeMain.setAbandontPan();
+    	if(DataMain.getInstance().getDataPartie().isMonTour() == true  &&  DataMain.getInstance().getDataTrolleSelection().isSelectionMode() == false ){	
+    		EauCalmeMain.setAbandontPan();
+    	}
     }
     
+    public void proposerAbandonIA()
+    {
+    	this.validerEnvoiDemandeAbandont();
+    }
+    
+    
     public void validerEnvoiDemandeAbandont(){
-    	this.jeProposeAbandon=true;
+    	DataMain.getInstance().getDataPartie().proposerAbandont();
     }
 
 
@@ -698,15 +710,22 @@ public class Jeu implements JeuListener  {
 		if(connected){
 			if(Double.parseDouble(value) > rand){
 				System.out.println("L'autre commence "+Double.parseDouble(value));
-				start=false;
-				monTour=false;
-
+				DataMain.getInstance().getDataPartie().initialiserPremierTour(false);
+				
+				// création d'une nouvelle partie DAO
+				DataMain.getInstance().getDataPartie().setPartie(PartieDAO.createNewPartie(DataMain.getInstance().getDataPlayer().getJoueur(), 
+						DataMain.getInstance().getDataPartie().getAdversaire(), false));
+				
 				this.coupAdverce();
 			}
 			else{
 				System.out.println("Je commence "+Double.parseDouble(value));
-				start=true;
-				monTour=true;
+				
+				// création d'une nouvelle partie DAO
+				DataMain.getInstance().getDataPartie().setPartie(PartieDAO.createNewPartie(DataMain.getInstance().getDataPlayer().getJoueur(), 
+						DataMain.getInstance().getDataPartie().getAdversaire(), true));
+				
+				DataMain.getInstance().getDataPartie().initialiserPremierTour(true);
 			}
 		}
 		return connected;
@@ -714,7 +733,7 @@ public class Jeu implements JeuListener  {
 	
 	@Override
 	public boolean getTour(){
-		return this.monTour;
+		return DataMain.getInstance().getDataPartie().isMonTour();
 	}
 	
 	
@@ -726,24 +745,30 @@ public class Jeu implements JeuListener  {
 				
 				Object obj;
 				
-				// test si on a surrender la mache precedante
-				valideAbandon=1;
+				
+				DataMain.getInstance().getDataPartie().setValideAbandon(1);
 				
 				try {
 					obj = parser.parse(coup);
 					boolean demandeAbandon=(Boolean) ((JSONObject) obj).get("surrender");
 					
-					if(demandeAbandon&& jeProposeAbandon){
+					if(demandeAbandon&& DataMain.getInstance().getDataPartie().isJeProposeAbandon()){
 						startManche2();
-						valideAbandon=0;
+						DataMain.getInstance().getDataPartie().setValideAbandon(0);
 					}
-					else if( !demandeAbandon && jeProposeAbandon){
-						jeProposeAbandon=false;
+					else if( !demandeAbandon && DataMain.getInstance().getDataPartie().isJeProposeAbandon()){
+						DataMain.getInstance().getDataPartie().setJeProposeAbandon(false);
+						DataMain.getInstance().getDataPartie().setNbDemandeAbandonMoi(DataMain.getInstance().getDataPartie().getNbDemandeAbandonMoi()+1);
+						
+						if(DataMain.getInstance().getDataPartie().getNbDemandeAbandonMoi() >= Jeu.nbDemandeAbandontMax){ // si limite attente
+							startManche2();
+							DataMain.getInstance().getDataPartie().setValideAbandon(0);
+						}
 					}
 					else if(demandeAbandon){
-						valideAbandon=0;
-						EauCalmeMain.setValiderAbandonPanel(DataMain.getInstance().getDataPlateau().getPointTrolle(), DataMain.getInstance().getDataPlateau().getPointNain(), scorePartie1);
-						while(valideAbandon==0){
+						DataMain.getInstance().getDataPartie().setValideAbandon(0);
+						EauCalmeMain.setValiderAbandonPanel(DataMain.getInstance().getDataPlateau().getPointTrolle(), DataMain.getInstance().getDataPlateau().getPointNain(), DataMain.getInstance().getDataPartie().getScorePartie1());
+						while(DataMain.getInstance().getDataPartie().getValideAbandon()==0){
 							try {
 								Thread.sleep(200);
 							} catch (InterruptedException e) {
@@ -752,8 +777,8 @@ public class Jeu implements JeuListener  {
 						}
 					}
 					
-					if(valideAbandon==1){ // pas validation de l'abandont
-						valideAbandon=0;
+					if(DataMain.getInstance().getDataPartie().getValideAbandon()==1){ // pas validation de l'abandon
+						DataMain.getInstance().getDataPartie().setValideAbandon(0);
 						String caseD=(String) ((JSONObject) obj).get("slot_1");
 						String caseA=(String) ((JSONObject) obj).get("slot_2");
 						JSONArray tableauPrise=(JSONArray) ((JSONObject) obj).get("slot_eat");
@@ -770,20 +795,27 @@ public class Jeu implements JeuListener  {
 						
 	                    deplacerPiece(DataMain.getInstance().getDataPionSelectione(), (caseA.toCharArray()[0]-'A'), (Integer.parseInt(caseA.substring(1))-1));
 	                    
+	                    List<int[]> listPriseNain=new ArrayList<int[]>();
+	                    
 	                    if(tableauPrise.size()>0){
 	                    	for(int j=0;j<tableauPrise.size();j++)
 	                    	{
 	                    		String nain=(String) tableauPrise.get(j);
 	                    		System.out.println("Prise de :"+nain);
+	                    		listPriseNain.add(DataMain.getInstance().getDataPlateau().getPionByName(nain));
 	                    		DataMain.getInstance().getDataPlateau().killNainById(nain);
+	                    		
 	                    	}
 	                    }
+	                    
+	                    // remplisage database
+	                    addDeplacementToBDD(posX, posY,  (caseA.toCharArray()[0]-'A'),  (Integer.parseInt(caseA.substring(1))-1), listPriseNain);
 						
 	                    DataMain.getInstance().getDataPionSelectione().unselectPion();
 	                    DataMain.getInstance().getDataTrolleSelection().endTrollePrise();
-						monTour=true;
+						DataMain.getInstance().getDataPartie().finDuTourDeAdversaire();
 					}
-					else if(valideAbandon!=0){
+					else if(DataMain.getInstance().getDataPartie().getValideAbandon()!=0){
 						try {
 							DataMain.getInstance().getFileRequeteGet().offer(JSonGenerator.genererDeplacement(0, 0, 0, 0, null,true,null));
 							startManche2();
@@ -819,14 +851,14 @@ public class Jeu implements JeuListener  {
 
 	@Override
 	public void startManche2() {
-		if(this.manche==1){
+		if(DataMain.getInstance().getDataPartie().getManche()==1){
 			/*
 			 * Score
 			 */
-			if(this.start==true)
-				this.scorePartie1=new int[]{DataMain.getInstance().getDataPlateau().getPointNain(),DataMain.getInstance().getDataPlateau().getPointTrolle()};
+			if( DataMain.getInstance().getDataPartie().isiStart()==true)
+				DataMain.getInstance().getDataPartie().setScorePartie1(new int[]{DataMain.getInstance().getDataPlateau().getPointNain(),DataMain.getInstance().getDataPlateau().getPointTrolle()});
 			else
-				this.scorePartie1=new int[]{DataMain.getInstance().getDataPlateau().getPointTrolle(),DataMain.getInstance().getDataPlateau().getPointNain()};
+				DataMain.getInstance().getDataPartie().setScorePartie1(new int[]{DataMain.getInstance().getDataPlateau().getPointTrolle(),DataMain.getInstance().getDataPlateau().getPointNain()});
 			
 			/*
 			 * Réinitialisation
@@ -834,31 +866,63 @@ public class Jeu implements JeuListener  {
 			DataMain.getInstance().getDataPionSelectione().unselectPion();
 			DataMain.getInstance().getDataPlateau().writeInitPlateau();
 			JSonGenerator.setShot(0);
-			this.jeProposeAbandon=false;
+			DataMain.getInstance().getDataPartie().setJeProposeAbandon(false);
 			
 			/*
 			 * Changer ordre
 			 */
-			this.manche=2;
-			this.monTour = !this.start;
-			
-			if(!this.monTour)
+			DataMain.getInstance().getDataPartie().changerTour();
+			if(!DataMain.getInstance().getDataPartie().isMonTour())
 				this.coupAdverce();
 			
 		}
 		else{
-			int scoreMoi=scorePartie1[0];
-			int scoreAdv=scorePartie1[1];
-			if(this.start){
+			int scoreMoi=DataMain.getInstance().getDataPartie().getScorePartie1()[0];
+			int scoreAdv=DataMain.getInstance().getDataPartie().getScorePartie1()[1];
+			if(DataMain.getInstance().getDataPartie().isiStart()){
 				scoreMoi+=DataMain.getInstance().getDataPlateau().getPointTrolle();
 				scoreAdv+=DataMain.getInstance().getDataPlateau().getPointNain();
 			}else{
 				scoreMoi+=DataMain.getInstance().getDataPlateau().getPointNain();
 				scoreAdv+=DataMain.getInstance().getDataPlateau().getPointTrolle();
 			}
+			
+			// sauvegarde du score
+			DataMain.getInstance().getDataPartie().getPartie().setScoreJ1(scoreMoi);
+			DataMain.getInstance().getDataPartie().getPartie().setScoreJ2(scoreAdv);
+			PartieDAO.updatePartie(DataMain.getInstance().getDataPartie().getPartie());
+			
 			EauCalmeMain.setFinDePartiePan(scoreMoi, scoreAdv);
 		}
 	}
 	
+	public void addDeplacementToBDD(int cx,int cy,int dx,int dy,List<int[]> troll){
+		Deplacement d1=new Deplacement(0,PositionDAO.getPositionId(cx, cy),PositionDAO.getPositionId(dx, dy),DataMain.getInstance().getDataPartie().getCoupActuel());
+		
+		
+		
+		// création du déplacement
+		DeplacementDAO.addDeplacement(d1);
+		
+		
+		//récupération de l'id
+		d1=DeplacementDAO.getDeplacementId(d1);
+		if(d1!=null){
+			// ajout de la liste de troll
+			if(troll!=null){
+				int trollArray[][]=new int[troll.size()][];
+				for(int j=0;j<troll.size();j++){
+					trollArray[j]=troll.get(j);
+				}
+				if(trollArray!=null)
+					TrollParDeplacementDAO.addNewTrollParDeplacement(d1, trollArray);
+			}
+			
+			// ajoute de la correspondence partie déplacement
+			DeplacementParPartieDAO.addNewDeplacementParPartie(d1, DataMain.getInstance().getDataPartie().getPartie());
+		}
+		
+		
+	}
     
 }

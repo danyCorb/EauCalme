@@ -3,6 +3,7 @@ package InterfaceGraphique;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -10,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import DAO.PartieDAO;
 import MainPackage.EauCalmeMain;
 
 public class VoirScorePanel extends JPanel{
@@ -24,53 +26,11 @@ public class VoirScorePanel extends JPanel{
 		this.add(retour, BorderLayout.NORTH);
 		this.add(jsp,BorderLayout.CENTER);
 		panelIntern.add(vBox);
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
-		vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
+		
+		
+		reloadPanel();
+		
+		//vBox.add(new JLabel("Dany Contre IA : victoire IA 10/21 Le 07/03/2018"));
 		
 		retour.addActionListener(new ActionListener() {
 			
@@ -81,5 +41,14 @@ public class VoirScorePanel extends JPanel{
 		});
 		
 	}
+	public void reloadPanel(){
+		vBox.removeAll();
+		List<String> texts=PartieDAO.getPartieForView();
+		for(String t : texts){
+			vBox.add(new JLabel(t));
+			
+		}
+	}
+	
 	
 }

@@ -69,6 +69,7 @@ public class DataPlateau {
 			{Pion.Null,Pion.Null,Pion.Null,Pion.Null,Pion.Nain,Pion.Vide,Pion.Vide,Pion.Vide,Pion.Vide,Pion.Vide,Pion.Nain,Pion.Null,Pion.Null,Pion.Null,Pion.Null},
 			{Pion.Null,Pion.Null,Pion.Null,Pion.Null,Pion.Null,Pion.Nain,Pion.Nain,Pion.Vide,Pion.Nain,Pion.Nain,Pion.Null,Pion.Null,Pion.Null,Pion.Null,Pion.Null}
 		};
+		
 		plateauPion=new String[][]{
 			{"","","","","","D26","D25","","D24","D23","","","","",""},
 			{"","","","","D27","","","","","",   "D22","","","",""},
@@ -116,6 +117,21 @@ public class DataPlateau {
 			}
 		}
 		return score;
+	}
+	
+	public int[] getPionByName(String name){
+		int[] ret=null;
+		
+		for(int j=0;j<plateauPion.length  &&  ret==null;j++){
+			for(int k=0;k<plateauPion[j].length && ret == null;k++){
+				if(plateauPion[j][k].compareTo(name)==0){
+					ret=new int[]{j,k};
+				}
+			}
+		}
+		
+		
+		return ret;
 	}
 	
 	public void killNain(int x,int y){

@@ -9,10 +9,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Data.DataMain;
+import Entite.Joueur;
 import Jeu.Jeu;
 import MainPackage.EauCalmeMain;
 
-public class JoueurContreIAPanel extends JPanel{
+public class JoueurContreJoueurPanel extends JPanel{
 	private JTextField jtf1=new JTextField();
 	private JTextField jtf2=new JTextField();
 	
@@ -22,7 +24,7 @@ public class JoueurContreIAPanel extends JPanel{
 	private JLabel jl2=new JLabel("Port intern:");
 	private Box vBox=Box.createVerticalBox();
 	
-	public JoueurContreIAPanel(){
+	public JoueurContreJoueurPanel(){
 		this.add(vBox);
 		vBox.add(jl);
 		vBox.add(jtf1);
@@ -35,6 +37,7 @@ public class JoueurContreIAPanel extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				if(jtf1.getText().compareTo("")!=0 && jtf2.getText().compareTo("")!=0){
+					DataMain.getInstance().getDataPartie().setAdversaire(new Joueur(0,"Joueur "+jtf1.getText()) );
 					EauCalmeMain.startCommunication(jtf1.getText(),Integer.parseInt(jtf2.getText()),new Jeu());
 				}
 			}

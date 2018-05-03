@@ -47,10 +47,6 @@ public class JSonGenerator {
 			}
 		}
 		
-		for(String elem : ret){
-			System.out.println(elem);
-		}
-		
 		return ret;
 	}
 	

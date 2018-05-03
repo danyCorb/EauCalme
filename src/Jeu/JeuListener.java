@@ -7,7 +7,7 @@ public interface JeuListener {
 	 public boolean checkIsTrayCase(int x,int y);
 	 public int[][] getCaseValidePourDeplacement(int x,int y);
 	 public int[][] getCaseValidePourDeplacementSpecial(int x,int y);
-	 public void deplacerPiece(DataPionSelectione dps, int newCaseX,int newCaseY);
+	 public int deplacerPiece(DataPionSelectione dps, int newCaseX,int newCaseY);
 	 public void endTrollSelection();
 	 public void ProposerAbandon();
 	 public boolean startJeu();

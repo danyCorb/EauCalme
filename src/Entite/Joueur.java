@@ -11,6 +11,10 @@ public class Joueur {
 	public Joueur(){
 		
 	}
+	public Joueur(int id,String nom){
+		this.id=id;
+		this.nom=nom;
+	}
 
 	public int getId() {
 		return id;

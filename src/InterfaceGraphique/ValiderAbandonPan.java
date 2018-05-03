@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Data.DataMain;
 import Jeu.Jeu;
 import MainPackage.EauCalmeMain;
 
@@ -34,7 +35,13 @@ public class ValiderAbandonPan extends JPanel{
 		Non.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				((Jeu)EauCalmeMain.jl).valideAbandon=1;
+				DataMain.getInstance().getDataPartie().setValideAbandon(1);
+				DataMain.getInstance().getDataPartie().setNbDemandeAbandonAdverse(DataMain.getInstance().getDataPartie().getNbDemandeAbandonAdverse()+1);
+				
+				if(DataMain.getInstance().getDataPartie().getNbDemandeAbandonAdverse()>= Jeu.nbDemandeAbandontMax){ // si limite attente
+					DataMain.getInstance().getDataPartie().setValideAbandon(2);
+				}
+				
 				EauCalmeMain.returnToGame();
 			}
 		});
@@ -42,7 +49,7 @@ public class ValiderAbandonPan extends JPanel{
 		Oui.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				((Jeu)EauCalmeMain.jl).valideAbandon=2;
+				DataMain.getInstance().getDataPartie().setValideAbandon(2);
 				EauCalmeMain.returnToGame();
 			}
 		});

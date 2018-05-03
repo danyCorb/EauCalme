@@ -18,6 +18,8 @@ public class DataMain {
 	private DataFenetre dataFenetre;
 	private DataPlayer dataPlayer;
 	private DataTrolleSelection dataTrolleSelection;
+	private DataPartie dataPartie;
+	private DataViewGame dataViewGame;
 	
 	
 	private Queue<String> fileRequeteGet;
@@ -30,8 +32,15 @@ public class DataMain {
 		dataFenetre=new DataFenetre();
 		dataPlayer=new DataPlayer();
 		dataTrolleSelection=new DataTrolleSelection();
+		dataPartie=new DataPartie();
+		dataViewGame=new DataViewGame();
 		
 		fileRequeteGet=new PriorityQueue<>();
+	}
+
+
+	public DataViewGame getDataViewGame() {
+		return dataViewGame;
 	}
 
 
@@ -73,6 +82,11 @@ public class DataMain {
 
 	public Queue<String> getFileRequeteGet() {
 		return fileRequeteGet;
+	}
+
+
+	public DataPartie getDataPartie() {
+		return dataPartie;
 	}
 
 
