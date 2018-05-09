@@ -102,17 +102,24 @@ public class Jeu implements JeuListener  {
 	            	}
 	                
 	            }
-	        }else if(this.checkIsTrayCase(posX, posY) && DataMain.getInstance().getDataTrolleSelection().isSelectionMode()){
+	        }else if(this.checkIsTrayCase(posX, posY) && DataMain.getInstance().getDataTrolleSelection().isSelectionMode()){ // clic sur un nain lors d'une prise troll
 	        	if(DataMain.getInstance().getDataPlateau().getPionInCase(posX, posY)==Pion.Nain){
 	        		boolean dejaAjoute=false;
-	        		for(int j=0;j<DataMain.getInstance().getDataTrolleSelection().getListeCase().size();j++)
-	        			if(DataMain.getInstance().getDataTrolleSelection().getListeCase().get(j)[0]==posX && DataMain.getInstance().getDataTrolleSelection().getListeCase().get(j)[1]==posY)
-	        					dejaAjoute=true;
-	        			
-	        		if(!dejaAjoute)
-	        			DataMain.getInstance().getDataTrolleSelection().addCase(posX, posY);
-	        		else
-	        			DataMain.getInstance().getDataTrolleSelection().removeCase(posX, posY);
+	        		
+	        		if( posX >= DataMain.getInstance().getDataTrolleSelection().getCaseX()-1 &&
+	        				posX <= DataMain.getInstance().getDataTrolleSelection().getCaseX()+1 &&
+	        				posY >= DataMain.getInstance().getDataTrolleSelection().getCaseY()-1 &&
+	        				posY <= DataMain.getInstance().getDataTrolleSelection().getCaseY()+1 ) // si nain à cote du troll
+	        		{
+	        			for(int j=0;j<DataMain.getInstance().getDataTrolleSelection().getListeCase().size();j++)
+		        			if(DataMain.getInstance().getDataTrolleSelection().getListeCase().get(j)[0]==posX && DataMain.getInstance().getDataTrolleSelection().getListeCase().get(j)[1]==posY)
+		        					dejaAjoute=true;
+		        			
+		        		if(!dejaAjoute)
+		        			DataMain.getInstance().getDataTrolleSelection().addCase(posX, posY);
+		        		else
+		        			DataMain.getInstance().getDataTrolleSelection().removeCase(posX, posY);
+	        		}
 	        	}
 	        }
     	}
@@ -127,6 +134,10 @@ public class Jeu implements JeuListener  {
     	return false;
     }
     
+    
+    /**
+     * int  [0][x] ; [1][y]
+     */
     public int[][] getCaseValidePourDeplacement(int x,int y){
     	Pion p=DataMain.getInstance().getDataPlateau().getPionInCase(x, y);
     	List<int[]> caseDispo=new ArrayList<>();
@@ -707,6 +718,7 @@ public class Jeu implements JeuListener  {
 			}
 			
 		}
+		
 		if(connected){
 			if(Double.parseDouble(value) > rand){
 				System.out.println("L'autre commence "+Double.parseDouble(value));
@@ -759,6 +771,7 @@ public class Jeu implements JeuListener  {
 					else if( !demandeAbandon && DataMain.getInstance().getDataPartie().isJeProposeAbandon()){
 						DataMain.getInstance().getDataPartie().setJeProposeAbandon(false);
 						DataMain.getInstance().getDataPartie().setNbDemandeAbandonMoi(DataMain.getInstance().getDataPartie().getNbDemandeAbandonMoi()+1);
+						DataMain.getInstance().getDataPartie().setNbDemandeAbandonAdverse(0);
 						
 						if(DataMain.getInstance().getDataPartie().getNbDemandeAbandonMoi() >= Jeu.nbDemandeAbandontMax){ // si limite attente
 							startManche2();
@@ -766,16 +779,40 @@ public class Jeu implements JeuListener  {
 						}
 					}
 					else if(demandeAbandon){
+						DataMain.getInstance().getDataPartie().setNbDemandeAbandonMoi(0);
 						DataMain.getInstance().getDataPartie().setValideAbandon(0);
-						EauCalmeMain.setValiderAbandonPanel(DataMain.getInstance().getDataPlateau().getPointTrolle(), DataMain.getInstance().getDataPlateau().getPointNain(), DataMain.getInstance().getDataPartie().getScorePartie1());
-						while(DataMain.getInstance().getDataPartie().getValideAbandon()==0){
-							try {
-								Thread.sleep(200);
-							} catch (InterruptedException e) {
-								e.printStackTrace();
+						
+						if(!EauCalmeMain.checkIsAIA()){ // si la partie est dirigé par un joueur
+							EauCalmeMain.setValiderAbandonPanel(DataMain.getInstance().getDataPlateau().getPointTrolle(), DataMain.getInstance().getDataPlateau().getPointNain(), DataMain.getInstance().getDataPartie().getScorePartie1());
+							while(DataMain.getInstance().getDataPartie().getValideAbandon()==0){
+								try {
+									Thread.sleep(200);
+								} catch (InterruptedException e) {
+									e.printStackTrace();
+								}
+							}
+						}
+						else{ // sinon par une IA
+							if(EauCalmeMain.getChoiceIaAbandon()){ // abandon des 2 cote
+								System.out.println("Abandon accepte!");
+								DataMain.getInstance().getDataPartie().setValideAbandon(2);
+							}
+							else{ // refus
+								DataMain.getInstance().getDataPartie().setValideAbandon(1);
+								DataMain.getInstance().getDataPartie().setNbDemandeAbandonAdverse(DataMain.getInstance().getDataPartie().getNbDemandeAbandonAdverse()+1);
+								
+								if(DataMain.getInstance().getDataPartie().getNbDemandeAbandonAdverse()>= Jeu.nbDemandeAbandontMax){ // si limite attente
+									DataMain.getInstance().getDataPartie().setValideAbandon(2);
+								}
 							}
 						}
 					}
+					else{
+						DataMain.getInstance().getDataPartie().setNbDemandeAbandonMoi(0);
+						DataMain.getInstance().getDataPartie().setNbDemandeAbandonAdverse(0);
+					}
+					
+					
 					
 					if(DataMain.getInstance().getDataPartie().getValideAbandon()==1){ // pas validation de l'abandon
 						DataMain.getInstance().getDataPartie().setValideAbandon(0);
@@ -852,6 +889,7 @@ public class Jeu implements JeuListener  {
 	@Override
 	public void startManche2() {
 		if(DataMain.getInstance().getDataPartie().getManche()==1){
+			System.out.println("\n\n --- Start manche 2 --- \n\n");
 			/*
 			 * Score
 			 */
@@ -867,6 +905,9 @@ public class Jeu implements JeuListener  {
 			DataMain.getInstance().getDataPlateau().writeInitPlateau();
 			JSonGenerator.setShot(0);
 			DataMain.getInstance().getDataPartie().setJeProposeAbandon(false);
+			
+			DataMain.getInstance().getDataPartie().setNbDemandeAbandonAdverse(0);
+			DataMain.getInstance().getDataPartie().setNbDemandeAbandonMoi(0);
 			
 			/*
 			 * Changer ordre
@@ -892,7 +933,17 @@ public class Jeu implements JeuListener  {
 			DataMain.getInstance().getDataPartie().getPartie().setScoreJ2(scoreAdv);
 			PartieDAO.updatePartie(DataMain.getInstance().getDataPartie().getPartie());
 			
-			EauCalmeMain.setFinDePartiePan(scoreMoi, scoreAdv);
+			if(!EauCalmeMain.checkIsAIA()){
+				EauCalmeMain.setFinDePartiePan(scoreMoi, scoreAdv);
+			}
+			else{
+				if(scoreMoi>scoreAdv){
+					System.out.println("Coef mis a jours!");
+					EauCalmeMain.ia.mettreAJourLesCoef();
+				}
+				System.out.println("Score : \n Moi:"+scoreMoi+" ( "+DataMain.getInstance().getDataPartie().getScorePartie1()[0]+" manche 1 ) "+"\n Adv:"+scoreAdv+" ( " + DataMain.getInstance().getDataPartie().getScorePartie1()[1] +" manche 1 )");
+				System.exit(0);
+			}
 		}
 	}
 	
@@ -923,6 +974,24 @@ public class Jeu implements JeuListener  {
 		}
 		
 		
+	}
+	
+	public List<int[]> getListCaseDisponibles(){
+		int posX,posY;
+		List<int[]> ret=new ArrayList<>();
+		
+		for(posX=0;posX<DataMain.getInstance().getDataPlateau().getPlateauDimension(); ++posX){
+			for(posY=0;posY<DataMain.getInstance().getDataPlateau().getPlateauDimension(); ++posY){
+				if(DataMain.getInstance().getDataPlateau().getPionInCase(posX, posY)!=Pion.Vide){
+		    		Pion pionActuel=DataMain.getInstance().getDataPlateau().getPionInCase(posX, posY);
+		    		if( (DataMain.getInstance().getDataPartie().isiStart()&&DataMain.getInstance().getDataPartie().getManche()==1&&pionActuel==Pion.Nain) || (DataMain.getInstance().getDataPartie().isiStart()&&DataMain.getInstance().getDataPartie().getManche()==2&&pionActuel==Pion.Trolle) || 
+		        			(!DataMain.getInstance().getDataPartie().isiStart()&&DataMain.getInstance().getDataPartie().getManche()==1&&pionActuel==Pion.Trolle) || (!DataMain.getInstance().getDataPartie().isiStart()&&DataMain.getInstance().getDataPartie().getManche()==2&&pionActuel==Pion.Nain)	){
+		        		ret.add(new int[]{posX,posY});
+		    		}
+		    	}
+			}
+		}
+		return ret;
 	}
     
 }

@@ -53,6 +53,10 @@ public class Configuration {
 	public String getIp() {
 		return ip;
 	}
+	
+	public String getURLCOnnexion(){
+		return "http://"+ip+":"+portExtern;
+	}
 
 
 	public int getPortIntern() {

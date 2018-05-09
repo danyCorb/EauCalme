@@ -3,6 +3,7 @@ import java.io.IOException;
 
 import DAO.MainDAO;
 import Data.DataMain;
+import Entite.Joueur;
 import Entite.Partie;
 import Events.KeyBoardEvent;
 import Events.KeyBoardEventShowGame;
@@ -48,8 +49,8 @@ public class EauCalmeMain {
 	private static VoirPartiePanel vpp=new VoirPartiePanel();
 	private static ValiderAbandonPan vap=new ValiderAbandonPan();
 	private static FinDePartiePan fpp=new FinDePartiePan();
-	private static Configuration configuration;
-	private static IA ia=new IA();
+	public static Configuration configuration;
+	public static IA ia=new IA();
 	private static DrawingPanViewGame dpvg=new DrawingPanViewGame();
 	
 
@@ -58,6 +59,8 @@ public class EauCalmeMain {
 	public static APIServeur serveur;
 	public static APIClient client;
 	
+	
+	public static boolean isConnected=false;
 	
 	
 	public static JeuListener jl=new Jeu();
@@ -76,8 +79,9 @@ public class EauCalmeMain {
 			f.setContentPane(snp);
 		}
 		else{
-			// game pan
-			EauCalmeMain.setGamePanel();
+			// start IA vs IA
+			DataMain.getInstance().getDataPartie().setAdversaire(new Joueur(0,"Joueur IA") );
+			EauCalmeMain.startCommunication(configuration.getURLCOnnexion(), configuration.getPortIntern(), new Jeu());
 		}
 		
 		
@@ -94,7 +98,16 @@ public class EauCalmeMain {
 		
 		if(configuration.isHaveConfig()){
 			// ia launch
-			ia.startIA();
+			long time=System.currentTimeMillis();
+			while(!isConnected && System.currentTimeMillis()-time < 30*1000 ){
+				try {
+					Thread.sleep(200);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+			if(isConnected)
+				ia.startIA();
 		}
 		
 		
@@ -156,6 +169,7 @@ public class EauCalmeMain {
 	}
 	
 	public static void setFinDePartiePan(int scoreMoi,int scoreAdv){
+		EauCalmeMain.isConnected=false;
 		fpp.setScore(scoreMoi, scoreAdv);
 		f.setContentPane(fpp);
 		f.setVisible(true);
@@ -174,13 +188,17 @@ public class EauCalmeMain {
 				e.printStackTrace();
 			}
 			
+			isConnected=true;
+			
 			jl=jeu;
 			if(!jl.startJeu()){ // echec de connexion
 				EauCalmeMain.setMenuPanel();
+				isConnected=false;
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 			EauCalmeMain.setMenuPanel();
+			isConnected=false;
 		}
 	}
 	
@@ -202,6 +220,17 @@ public class EauCalmeMain {
 		jvg.startJeuViewGame();
 	}
 	
+	public static boolean checkAdvProposeAbandont(){
+		return (f.getContentPane() instanceof ValiderAbandonPan);
+	}
+	
+	public static boolean checkIsAIA(){
+		return ia.isIARun();
+	}
+	
+	public static boolean getChoiceIaAbandon(){
+		return ia.getValideAbandonAdv();
+	}
 	
 
 }

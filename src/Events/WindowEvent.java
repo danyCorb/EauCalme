@@ -3,6 +3,7 @@ package Events;
 import java.awt.event.WindowListener;
 
 import InterfaceGraphique.Fenetre;
+import MainPackage.EauCalmeMain;
 
 public class WindowEvent  implements WindowListener{
 	Fenetre f;
@@ -24,6 +25,7 @@ public class WindowEvent  implements WindowListener{
 
 	@Override
 	public void windowClosing(java.awt.event.WindowEvent e) {
+		EauCalmeMain.isConnected=false;
 		f.closeWindow();
 	}
 

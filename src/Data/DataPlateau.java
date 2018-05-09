@@ -1,8 +1,8 @@
 package Data;
 
 public class DataPlateau {
-	Pion plateau[][];
-	String plateauPion[][];
+	private Pion plateau[][];
+	private String plateauPion[][];
 	
 	public DataPlateau(){
 		plateau= new Pion[15][];
@@ -144,7 +144,6 @@ public class DataPlateau {
 	}
 	
 	public void killNainById(String id){
-		
 		for(int j=0;j<15;j++)
 			for(int k=0;k<15;k++)
 			{
@@ -153,8 +152,20 @@ public class DataPlateau {
 					plateauPion[j][k]="";
 				}
 			}
-		
-		
+	}
+	public int getPlateauDimension(){
+		return this.plateau.length;
+	}
+	
+	public Pion[][] getPlateauDump(){
+		Pion ret[][]=new Pion[plateau.length][];
+		for(int j=0;j<plateau.length;++j){
+			ret[j]=new Pion[plateau[j].length];
+			for(int k=0;k<plateau[j].length;++k){
+				ret[j][k]=plateau[j][k];
+			}
+		}
+		return ret;
 	}
 	
 
